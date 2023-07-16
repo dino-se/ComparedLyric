@@ -15,11 +15,6 @@ namespace ComparedLyric
         {
             InitializeComponent();
             InitializeTimedLyrics();
-
-            string videoId = "olWvy0PiLfA";
-            string embedUrl = $"https://www.youtube.com/embed/{videoId}?autoplay=1";
-
-            chromiumWebBrowser1.Load(embedUrl);
         }
 
         private void InitializeTimedLyrics()
@@ -115,6 +110,13 @@ namespace ComparedLyric
             return lyricsLines.Length - 1;
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lblTitle.Text = "Compared Child";
+            string videoId = "olWvy0PiLfA";
+            string embedUrl = $"https://www.youtube.com/embed/{videoId}?autoplay=1";
+
+            chromiumWebBrowser1.Load(embedUrl);
+        }
     }
 }
