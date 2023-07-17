@@ -60,7 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LyricsStorage.cs" />
+    <Compile Include="Lyrics\TrappedInThePast.cs" />
+    <Compile Include="Lyrics\ComparedChild.cs" />
     <Compile Include="MainView.cs">
       <SubType>Form</SubType>
     </Compile>

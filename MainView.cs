@@ -22,9 +22,6 @@ namespace ComparedLyric
             var settings = new CefSettings();
             settings.CefCommandLineArgs.Add("autoplay-policy", "no-user-gesture-required");
             Cef.Initialize(settings);
-
-            lyricsLines = LyricsStorage.TimedLyricsText
-                .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
         }
 
         private bool ParseTimestamp(string line, out TimeSpan timestamp, out string lyricsText)
@@ -112,8 +109,23 @@ namespace ComparedLyric
 
         private void button1_Click(object sender, EventArgs e)
         {
+            lyricsLines = ComparedChild.TimedLyricsText
+                .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+
             lblTitle.Text = "Compared Child";
             string videoId = "olWvy0PiLfA";
+            string embedUrl = $"https://www.youtube.com/embed/{videoId}?autoplay=1";
+
+            chromiumWebBrowser1.Load(embedUrl);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            lyricsLines = TrappedInThePast.TimedLyricsText
+                .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+
+            lblTitle.Text = "Trapped in the Past";
+            string videoId = "lGFEqEFJ410";
             string embedUrl = $"https://www.youtube.com/embed/{videoId}?autoplay=1";
 
             chromiumWebBrowser1.Load(embedUrl);

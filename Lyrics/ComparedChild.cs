@@ -1,5 +1,5 @@
 ﻿
-class LyricsStorage
+class ComparedChild
 {
     // Need 5 tab indent to work for some reason
     // TODO: Fix
