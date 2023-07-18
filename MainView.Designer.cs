@@ -138,7 +138,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Controls.Add(this.lblLyrics);
-            this.flowLayoutPanel1.Enabled = false;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(38, 367);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(519, 71);
