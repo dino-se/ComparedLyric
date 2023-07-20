@@ -1,6 +1,6 @@
 ﻿namespace ComparedLyric
 {
-    partial class MusicListControl
+    partial class SongListControl
     {
         /// <summary> 
         /// Required designer variable.

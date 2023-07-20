@@ -1,6 +1,8 @@
 ﻿using CefSharp;
 using CefSharp.WinForms;
 using System;
+using System.Drawing;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace ComparedLyric
@@ -15,6 +17,7 @@ namespace ComparedLyric
         {
             InitializeComponent();
             InitializeTimedLyrics();
+            GenerateSongList();
         }
 
         private void InitializeTimedLyrics()
@@ -70,7 +73,7 @@ namespace ComparedLyric
                     this.Invoke(new Action(() =>
                     {
                         string formattedTime = TimeSpan.FromSeconds(currentTime).ToString(@"mm\:ss");
-                        lblTime.Text = formattedTime;
+                        lbl_Time.Text = formattedTime;
 
                         if (!isVideoStarted)
                             return;
@@ -112,7 +115,7 @@ namespace ComparedLyric
             lyricsLines = ComparedChild.TimedLyricsText
                 .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
 
-            lblTitle.Text = "Compared Child";
+            lbl_Title.Text = "Compared Child";
             string videoId = "olWvy0PiLfA";
             string embedUrl = $"https://www.youtube.com/embed/{videoId}?autoplay=1";
 
@@ -124,7 +127,43 @@ namespace ComparedLyric
             lyricsLines = TrappedInThePast.TimedLyricsText
                 .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
 
-            lblTitle.Text = "Trapped in the Past";
+            lbl_Title.Text = "Trapped in the Past";
+            string videoId = "lGFEqEFJ410";
+            string embedUrl = $"https://www.youtube.com/embed/{videoId}?autoplay=1";
+
+            chromiumWebBrowser1.Load(embedUrl);
+        }
+
+        private void GenerateSongList()
+        {
+            flp_SongList.Controls.Clear();
+
+            SongListControl[] listSongs = new SongListControl[2];
+
+            string[] songTitle = new string[2] { "Compared Child", "Trapped in the Past" };
+            string[] songTime = new string[2] { "","" };
+            Image[] songIcon = new Image[2] { Properties.Resources.Compared_Child, Properties.Resources.Trapped_In_The_Past};
+
+            for (int i = 0; i < listSongs.Length; i++)
+            {
+                listSongs[i] = new SongListControl();
+
+                listSongs[i].SongIcon = songIcon[i];
+                listSongs[i].SongTitle = songTitle[i];
+                listSongs[i].SongTime = songTime[i];
+
+                flp_SongList.Controls.Add(listSongs[i]);
+
+                listSongs[i].Click += new EventHandler(this.UserControl_Click);
+            }
+        }
+
+        void UserControl_Click(object sender, EventArgs e)
+        {
+            lyricsLines = TrappedInThePast.TimedLyricsText
+                .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+
+            lbl_Title.Text = "Trapped in the Past";
             string videoId = "lGFEqEFJ410";
             string embedUrl = $"https://www.youtube.com/embed/{videoId}?autoplay=1";
 

@@ -31,17 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
+            this.lbl_Time = new System.Windows.Forms.Label();
+            this.lbl_Title = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblLyrics = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chromiumWebBrowser1 = new CefSharp.WinForms.ChromiumWebBrowser();
             this.tmrRefreshData = new System.Windows.Forms.Timer(this.components);
+            this.flp_SongList = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -50,53 +49,36 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.lblTime);
-            this.panel1.Controls.Add(this.lblTitle);
+            this.panel1.Controls.Add(this.flp_SongList);
+            this.panel1.Controls.Add(this.lbl_Time);
+            this.panel1.Controls.Add(this.lbl_Title);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(611, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(279, 487);
             this.panel1.TabIndex = 1;
             // 
-            // button2
+            // lbl_Time
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(7, 182);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 87);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "                         Trapped in the           Past";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.lbl_Time.AutoSize = true;
+            this.lbl_Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Time.Location = new System.Drawing.Point(56, 52);
+            this.lbl_Time.Name = "lbl_Time";
+            this.lbl_Time.Size = new System.Drawing.Size(43, 16);
+            this.lbl_Time.TabIndex = 4;
+            this.lbl_Time.Text = "00:00";
             // 
-            // lblTime
+            // lbl_Title
             // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(56, 52);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(43, 16);
-            this.lblTime.TabIndex = 4;
-            this.lblTime.Text = "00:00";
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(56, 15);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(33, 16);
-            this.lblTitle.TabIndex = 3;
-            this.lblTitle.Text = "N/A";
+            this.lbl_Title.AutoSize = true;
+            this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title.Location = new System.Drawing.Point(56, 15);
+            this.lbl_Title.Name = "lbl_Title";
+            this.lbl_Title.Size = new System.Drawing.Size(33, 16);
+            this.lbl_Title.TabIndex = 3;
+            this.lbl_Title.Text = "N/A";
             // 
             // label3
             // 
@@ -116,27 +98,11 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Time :";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 90);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 87);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "                         Compared Child";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Controls.Add(this.lblLyrics);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(42, 400);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(40, 400);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(519, 71);
             this.flowLayoutPanel1.TabIndex = 7;
@@ -179,6 +145,14 @@
             this.tmrRefreshData.Enabled = true;
             this.tmrRefreshData.Tick += new System.EventHandler(this.tmrRefreshData_Tick);
             // 
+            // flp_SongList
+            // 
+            this.flp_SongList.AutoScroll = true;
+            this.flp_SongList.Location = new System.Drawing.Point(4, 85);
+            this.flp_SongList.Name = "flp_SongList";
+            this.flp_SongList.Size = new System.Drawing.Size(272, 399);
+            this.flp_SongList.TabIndex = 5;
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,11 +182,10 @@
         private System.Windows.Forms.Label lblLyrics;
         private System.Windows.Forms.GroupBox groupBox1;
         private CefSharp.WinForms.ChromiumWebBrowser chromiumWebBrowser1;
-        private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lbl_Time;
+        private System.Windows.Forms.Label lbl_Title;
         private System.Windows.Forms.Timer tmrRefreshData;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.FlowLayoutPanel flp_SongList;
     }
 }
 

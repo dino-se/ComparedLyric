@@ -4,30 +4,30 @@ using System.Windows.Forms;
 
 namespace ComparedLyric
 {
-    public partial class MusicListControl : UserControl
+    public partial class SongListControl : UserControl
     {
         private Image _icon;
         private string _title;
         private string _time;
-        public MusicListControl()
+        public SongListControl()
         {
             InitializeComponent();
             AddEvent();
         }
 
-        public Image Icon
+        public Image SongIcon
         {
             get { return _icon; }
             set { _icon = value; pb_SongListIcon.Image = value; }
         }
 
-        public string Title
+        public string SongTitle
         {
             get { return _title; }
             set { _title = value; lbl_SongListTitle.Text = value; }
         }
 
-        public string Time
+        public string SongTime
         {
             get { return _time; }
             set { _time = value; lbl_SongListTime.Text = value; }
