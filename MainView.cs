@@ -141,7 +141,7 @@ namespace ComparedLyric
             SongListControl[] listSongs = new SongListControl[2];
 
             string[] songTitle = new string[2] { "Compared Child", "Trapped in the Past" };
-            string[] songTime = new string[2] { "","" };
+            string[] songTime = new string[2] { "3:36","3:51" };
             Image[] songIcon = new Image[2] { Properties.Resources.Compared_Child, Properties.Resources.Trapped_In_The_Past};
 
             for (int i = 0; i < listSongs.Length; i++)
@@ -160,11 +160,11 @@ namespace ComparedLyric
 
         void UserControl_Click(object sender, EventArgs e)
         {
-            lyricsLines = TrappedInThePast.TimedLyricsText
+            lyricsLines = ComparedChild.TimedLyricsText
                 .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
 
-            lbl_Title.Text = "Trapped in the Past";
-            string videoId = "lGFEqEFJ410";
+            lbl_Title.Text = "Compared Child";
+            string videoId = "olWvy0PiLfA";
             string embedUrl = $"https://www.youtube.com/embed/{videoId}?autoplay=1";
 
             chromiumWebBrowser1.Load(embedUrl);
