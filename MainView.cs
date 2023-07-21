@@ -130,11 +130,11 @@ namespace ComparedLyric
 
                 flp_SongList.Controls.Add(listSongs[i]);
 
-                listSongs[i].Click += new EventHandler(this.UserControl_Click);
+                listSongs[i].Click += new EventHandler(this.SongControl_Click);
             }
         }
 
-        void UserControl_Click(object sender, EventArgs e)
+        void SongControl_Click(object sender, EventArgs e)
         {
             lyricsLines = ComparedChild.TimedLyricsText
                 .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
