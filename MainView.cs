@@ -110,30 +110,6 @@ namespace ComparedLyric
             return lyricsLines.Length - 1;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            lyricsLines = ComparedChild.TimedLyricsText
-                .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-
-            lbl_Title.Text = "Compared Child";
-            string videoId = "olWvy0PiLfA";
-            string embedUrl = $"https://www.youtube.com/embed/{videoId}?autoplay=1";
-
-            chromiumWebBrowser1.Load(embedUrl);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            lyricsLines = TrappedInThePast.TimedLyricsText
-                .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-
-            lbl_Title.Text = "Trapped in the Past";
-            string videoId = "lGFEqEFJ410";
-            string embedUrl = $"https://www.youtube.com/embed/{videoId}?autoplay=1";
-
-            chromiumWebBrowser1.Load(embedUrl);
-        }
-
         private void GenerateSongList()
         {
             flp_SongList.Controls.Clear();
