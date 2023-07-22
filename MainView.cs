@@ -1,5 +1,6 @@
 ﻿using CefSharp;
 using CefSharp.WinForms;
+using ComparedLyric.Properties;
 using System;
 using System.Drawing;
 using System.Reflection.Emit;
@@ -114,11 +115,21 @@ namespace ComparedLyric
         {
             flp_SongList.Controls.Clear();
 
-            SongListControl[] listSongs = new SongListControl[2];
+            SongListControl[] listSongs = new SongListControl[5];
 
-            string[] songTitle = new string[2] { "Compared Child", "Trapped in the Past" };
-            string[] songTime = new string[2] { "3:36","3:51" };
-            Image[] songIcon = new Image[2] { Properties.Resources.Compared_Child, Properties.Resources.Trapped_In_The_Past};
+            string[] songTitle = new string[5] {
+                "Compared Child",
+                "Trapped in the Past",
+                "Hide and Seek Alone",
+                "It's Raining After All",
+                "Compared Child (TUYU Remix)"};
+            string[] songTime = new string[5] { "3:36", "3:51", "3:13", "4:07", ""};
+            Image[] songIcon = new Image[5] {
+                Resources.Compared_Child,
+                Resources.Trapped_In_The_Past,
+                Resources.Trapped_In_The_Past,
+                Resources.Compared_Child,
+                Resources.Compared_Child };
 
             for (int i = 0; i < listSongs.Length; i++)
             {
@@ -141,10 +152,19 @@ namespace ComparedLyric
                 switch (songControl.SongTitle)
                 {
                     case "Compared Child":
-                        MethodForComparedChild();
+                        PlaySong("Compared Child", ComparedChild.TimedLyricsText, "olWvy0PiLfA");
                         break;
                     case "Trapped in the Past":
-                        MethodForTrappedInThePast();
+                        PlaySong("Trapped in the Past", TrappedInThePast.TimedLyricsText, "lGFEqEFJ410");
+                        break;
+                    case "Hide and Seek Alone":
+                        PlaySong("Hide and Seek Alone", TrappedInThePast.TimedLyricsText, "Bq0ZINOzVng");
+                        break;
+                    case "It's Raining After All":
+                        PlaySong("It's Raining After All", TrappedInThePast.TimedLyricsText, "D0ehC_8sQuU");
+                        break;
+                    case "Compared Child (TUYU Remix)":
+                        PlaySong("Compared Child (TUYU Remix)", ComparedChild.TimedLyricsText, "4TmzJzGXbB4");
                         break;
                     default:
                         break;
@@ -152,27 +172,11 @@ namespace ComparedLyric
             }
         }
 
-        private void MethodForComparedChild()
+        private void PlaySong(string songTitle, string timedLyricsText, string videoId)
         {
-            lyricsLines = ComparedChild.TimedLyricsText
-                .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-
-            lbl_Title.Text = "Compared Child";
-            string videoId = "olWvy0PiLfA";
+            lyricsLines = timedLyricsText.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+            lbl_Title.Text = songTitle;
             string embedUrl = $"https://www.youtube.com/embed/{videoId}?autoplay=1";
-
-            chromiumWebBrowser1.Load(embedUrl);
-        }
-
-        private void MethodForTrappedInThePast()
-        {
-            lyricsLines = TrappedInThePast.TimedLyricsText
-               .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-
-            lbl_Title.Text = "Trapped in the Past";
-            string videoId = "lGFEqEFJ410";
-            string embedUrl = $"https://www.youtube.com/embed/{videoId}?autoplay=1";
-
             chromiumWebBrowser1.Load(embedUrl);
         }
     }

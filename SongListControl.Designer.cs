@@ -38,7 +38,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(82)))), ((int)(((byte)(190)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(100)))), ((int)(((byte)(189)))));
             this.panel1.Controls.Add(this.pb_SongListIcon);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -50,9 +50,9 @@
             // 
             // pb_SongListIcon
             // 
-            this.pb_SongListIcon.Location = new System.Drawing.Point(3, 3);
+            this.pb_SongListIcon.Location = new System.Drawing.Point(6, 6);
             this.pb_SongListIcon.Name = "pb_SongListIcon";
-            this.pb_SongListIcon.Size = new System.Drawing.Size(81, 79);
+            this.pb_SongListIcon.Size = new System.Drawing.Size(75, 75);
             this.pb_SongListIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_SongListIcon.TabIndex = 0;
             this.pb_SongListIcon.TabStop = false;
@@ -82,7 +82,7 @@
             this.lbl_SongListTime.MouseEnter += new System.EventHandler(this.ucRequest_MouseEnter);
             this.lbl_SongListTime.MouseLeave += new System.EventHandler(this.ucRequest_MouseLeave);
             // 
-            // MusicListControl
+            // SongListControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -90,7 +90,7 @@
             this.Controls.Add(this.lbl_SongListTime);
             this.Controls.Add(this.lbl_SongListTitle);
             this.Controls.Add(this.panel1);
-            this.Name = "MusicListControl";
+            this.Name = "SongListControl";
             this.Size = new System.Drawing.Size(270, 85);
             this.MouseEnter += new System.EventHandler(this.ucRequest_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.ucRequest_MouseLeave);

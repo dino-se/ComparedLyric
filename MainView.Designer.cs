@@ -48,7 +48,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(215)))), ((int)(((byte)(218)))));
             this.panel1.Controls.Add(this.flp_SongList);
             this.panel1.Controls.Add(this.lbl_Time);
             this.panel1.Controls.Add(this.lbl_Title);
@@ -111,7 +111,7 @@
             // 
             this.lblLyrics.AutoSize = true;
             this.lblLyrics.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLyrics.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.lblLyrics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(100)))), ((int)(((byte)(189)))));
             this.lblLyrics.Location = new System.Drawing.Point(3, 0);
             this.lblLyrics.Name = "lblLyrics";
             this.lblLyrics.Size = new System.Drawing.Size(76, 31);
