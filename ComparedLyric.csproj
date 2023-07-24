@@ -60,6 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lyrics\HideAndSeekAlone.cs" />
+    <Compile Include="Lyrics\It%27sRainingAfterAll.cs" />
     <Compile Include="Lyrics\TrappedInThePast.cs" />
     <Compile Include="Lyrics\ComparedChild.cs" />
     <Compile Include="MainView.cs">

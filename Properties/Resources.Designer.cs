@@ -73,6 +73,16 @@ namespace ComparedLyric.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Compared_Child_Remix {
+            get {
+                object obj = ResourceManager.GetObject("Compared_Child_Remix", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Trapped_In_The_Past {
             get {
                 object obj = ResourceManager.GetObject("Trapped_In_The_Past", resourceCulture);

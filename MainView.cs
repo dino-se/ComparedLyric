@@ -158,10 +158,10 @@ namespace ComparedLyric
                         PlaySong("Trapped in the Past", TrappedInThePast.TimedLyricsText, "lGFEqEFJ410");
                         break;
                     case "Hide and Seek Alone":
-                        PlaySong("Hide and Seek Alone", TrappedInThePast.TimedLyricsText, "Bq0ZINOzVng");
+                        PlaySong("Hide and Seek Alone", HideAndSeekAlone.TimedLyricsText, "Bq0ZINOzVng");
                         break;
                     case "It's Raining After All":
-                        PlaySong("It's Raining After All", TrappedInThePast.TimedLyricsText, "D0ehC_8sQuU");
+                        PlaySong("It's Raining After All", ItsRainingAfterAll.TimedLyricsText, "D0ehC_8sQuU");
                         break;
                     case "Compared Child (TUYU Remix)":
                         PlaySong("Compared Child (TUYU Remix)", ComparedChild.TimedLyricsText, "4TmzJzGXbB4");
