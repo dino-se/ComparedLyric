@@ -129,7 +129,7 @@ namespace ComparedLyric
                 Resources.Trapped_In_The_Past,
                 Resources.Trapped_In_The_Past,
                 Resources.Compared_Child,
-                Resources.Compared_Child };
+                Resources.Compared_Child_Remix };
 
             for (int i = 0; i < listSongs.Length; i++)
             {
