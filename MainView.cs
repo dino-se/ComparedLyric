@@ -19,6 +19,7 @@ namespace ComparedLyric
             InitializeComponent();
             InitializeTimedLyrics();
             GenerateSongList();
+            //chromiumWebBrowser1.Visible = false;
         }
 
         private void InitializeTimedLyrics()
@@ -123,7 +124,7 @@ namespace ComparedLyric
                 "Hide and Seek Alone",
                 "It's Raining After All",
                 "Compared Child (TUYU Remix)"};
-            string[] songTime = new string[5] { "3:36", "3:51", "3:13", "4:07", ""};
+            string[] songTime = new string[5] { "3:36", "3:51", "3:13", "4:07", "3:27"};
             Image[] songIcon = new Image[5] {
                 Resources.Compared_Child,
                 Resources.Trapped_In_The_Past,

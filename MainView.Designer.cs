@@ -55,9 +55,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(611, 0);
+            this.panel1.Location = new System.Drawing.Point(629, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(279, 487);
+            this.panel1.Size = new System.Drawing.Size(303, 487);
             this.panel1.TabIndex = 1;
             // 
             // lbl_Time
@@ -139,6 +139,7 @@
             this.chromiumWebBrowser1.Name = "chromiumWebBrowser1";
             this.chromiumWebBrowser1.Size = new System.Drawing.Size(550, 309);
             this.chromiumWebBrowser1.TabIndex = 0;
+            this.chromiumWebBrowser1.Visible = false;
             // 
             // tmrRefreshData
             // 
@@ -150,15 +151,15 @@
             this.flp_SongList.AutoScroll = true;
             this.flp_SongList.Location = new System.Drawing.Point(4, 85);
             this.flp_SongList.Name = "flp_SongList";
-            this.flp_SongList.Size = new System.Drawing.Size(272, 399);
+            this.flp_SongList.Size = new System.Drawing.Size(296, 399);
             this.flp_SongList.TabIndex = 5;
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(890, 487);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(233)))), ((int)(((byte)(238)))));
+            this.ClientSize = new System.Drawing.Size(932, 487);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
