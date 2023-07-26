@@ -19,7 +19,6 @@ namespace ComparedLyric
             InitializeComponent();
             InitializeTimedLyrics();
             GenerateSongList();
-            //chromiumWebBrowser1.Visible = false;
         }
 
         private void InitializeTimedLyrics()

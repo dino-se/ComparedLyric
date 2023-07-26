@@ -139,7 +139,6 @@
             this.chromiumWebBrowser1.Name = "chromiumWebBrowser1";
             this.chromiumWebBrowser1.Size = new System.Drawing.Size(550, 309);
             this.chromiumWebBrowser1.TabIndex = 0;
-            this.chromiumWebBrowser1.Visible = false;
             // 
             // tmrRefreshData
             // 
