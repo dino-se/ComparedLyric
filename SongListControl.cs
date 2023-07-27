@@ -35,12 +35,12 @@ namespace ComparedLyric
 
         private void ucRequest_MouseEnter(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(217, 229, 242);
+            this.BackColor = Color.FromArgb(55, 192, 209);
         }
 
         private void ucRequest_MouseLeave(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(255, 255, 255);
+            this.BackColor = Color.FromArgb(201, 233, 238);
         }
 
         private void AddEvent()
