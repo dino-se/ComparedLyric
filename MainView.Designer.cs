@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flp_SongList = new System.Windows.Forms.FlowLayoutPanel();
             this.lbl_Time = new System.Windows.Forms.Label();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chromiumWebBrowser1 = new CefSharp.WinForms.ChromiumWebBrowser();
             this.tmrRefreshData = new System.Windows.Forms.Timer(this.components);
-            this.flp_SongList = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -59,6 +59,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(303, 487);
             this.panel1.TabIndex = 1;
+            // 
+            // flp_SongList
+            // 
+            this.flp_SongList.AutoScroll = true;
+            this.flp_SongList.Location = new System.Drawing.Point(4, 85);
+            this.flp_SongList.Name = "flp_SongList";
+            this.flp_SongList.Size = new System.Drawing.Size(296, 399);
+            this.flp_SongList.TabIndex = 5;
             // 
             // lbl_Time
             // 
@@ -145,25 +153,18 @@
             this.tmrRefreshData.Enabled = true;
             this.tmrRefreshData.Tick += new System.EventHandler(this.tmrRefreshData_Tick);
             // 
-            // flp_SongList
-            // 
-            this.flp_SongList.AutoScroll = true;
-            this.flp_SongList.Location = new System.Drawing.Point(4, 85);
-            this.flp_SongList.Name = "flp_SongList";
-            this.flp_SongList.Size = new System.Drawing.Size(296, 399);
-            this.flp_SongList.TabIndex = 5;
-            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(233)))), ((int)(((byte)(238)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(215)))), ((int)(((byte)(218)))));
             this.ClientSize = new System.Drawing.Size(932, 487);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ComparedLyric";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

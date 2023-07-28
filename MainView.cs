@@ -23,9 +23,7 @@ namespace ComparedLyric
 
         private void InitializeTimedLyrics()
         {
-            var settings = new CefSettings();
-            settings.CefCommandLineArgs.Add("autoplay-policy", "no-user-gesture-required");
-            Cef.Initialize(settings);
+            
         }
 
         private bool ParseTimestamp(string line, out TimeSpan timestamp, out string lyricsText)
