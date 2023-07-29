@@ -63,6 +63,7 @@
             // 
             this.lbl_SongListTitle.AutoSize = true;
             this.lbl_SongListTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SongListTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(100)))), ((int)(((byte)(189)))));
             this.lbl_SongListTitle.Location = new System.Drawing.Point(93, 25);
             this.lbl_SongListTitle.Name = "lbl_SongListTitle";
             this.lbl_SongListTitle.Size = new System.Drawing.Size(32, 13);
@@ -74,6 +75,7 @@
             // lbl_SongListTime
             // 
             this.lbl_SongListTime.AutoSize = true;
+            this.lbl_SongListTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(100)))), ((int)(((byte)(189)))));
             this.lbl_SongListTime.Location = new System.Drawing.Point(93, 47);
             this.lbl_SongListTime.Name = "lbl_SongListTime";
             this.lbl_SongListTime.Size = new System.Drawing.Size(34, 13);

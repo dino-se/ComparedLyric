@@ -38,12 +38,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblLyrics = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chromiumWebBrowser1 = new CefSharp.WinForms.ChromiumWebBrowser();
             this.tmrRefreshData = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.chromiumWebBrowser1 = new CefSharp.WinForms.ChromiumWebBrowser();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,6 +72,7 @@
             // 
             this.lbl_Time.AutoSize = true;
             this.lbl_Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Time.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(100)))), ((int)(((byte)(189)))));
             this.lbl_Time.Location = new System.Drawing.Point(56, 52);
             this.lbl_Time.Name = "lbl_Time";
             this.lbl_Time.Size = new System.Drawing.Size(43, 16);
@@ -82,6 +83,7 @@
             // 
             this.lbl_Title.AutoSize = true;
             this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(100)))), ((int)(((byte)(189)))));
             this.lbl_Title.Location = new System.Drawing.Point(56, 15);
             this.lbl_Title.Name = "lbl_Title";
             this.lbl_Title.Size = new System.Drawing.Size(33, 16);
@@ -91,6 +93,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(100)))), ((int)(((byte)(189)))));
             this.label3.Location = new System.Drawing.Point(14, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 13);
@@ -100,6 +103,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(100)))), ((int)(((byte)(189)))));
             this.label1.Location = new System.Drawing.Point(14, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 13);
@@ -110,7 +114,7 @@
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Controls.Add(this.lblLyrics);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(40, 400);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(49, 381);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(519, 71);
             this.flowLayoutPanel1.TabIndex = 7;
@@ -128,14 +132,18 @@
             this.lblLyrics.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblLyrics.Visible = false;
             // 
-            // groupBox1
+            // tmrRefreshData
             // 
-            this.groupBox1.Controls.Add(this.chromiumWebBrowser1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(577, 349);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
+            this.tmrRefreshData.Enabled = true;
+            this.tmrRefreshData.Tick += new System.EventHandler(this.tmrRefreshData_Tick);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.chromiumWebBrowser1);
+            this.panel2.Location = new System.Drawing.Point(21, 15);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(577, 338);
+            this.panel2.TabIndex = 8;
             // 
             // chromiumWebBrowser1
             // 
@@ -143,15 +151,10 @@
             this.chromiumWebBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.chromiumWebBrowser1.Location = new System.Drawing.Point(13, 21);
+            this.chromiumWebBrowser1.Location = new System.Drawing.Point(13, 15);
             this.chromiumWebBrowser1.Name = "chromiumWebBrowser1";
             this.chromiumWebBrowser1.Size = new System.Drawing.Size(550, 309);
-            this.chromiumWebBrowser1.TabIndex = 0;
-            // 
-            // tmrRefreshData
-            // 
-            this.tmrRefreshData.Enabled = true;
-            this.tmrRefreshData.Tick += new System.EventHandler(this.tmrRefreshData_Tick);
+            this.chromiumWebBrowser1.TabIndex = 2;
             // 
             // MainView
             // 
@@ -159,7 +162,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(215)))), ((int)(((byte)(218)))));
             this.ClientSize = new System.Drawing.Size(932, 487);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -170,7 +173,7 @@
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -181,12 +184,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label lblLyrics;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private CefSharp.WinForms.ChromiumWebBrowser chromiumWebBrowser1;
         private System.Windows.Forms.Label lbl_Time;
         private System.Windows.Forms.Label lbl_Title;
         private System.Windows.Forms.Timer tmrRefreshData;
         private System.Windows.Forms.FlowLayoutPanel flp_SongList;
+        private System.Windows.Forms.Panel panel2;
+        private CefSharp.WinForms.ChromiumWebBrowser chromiumWebBrowser1;
     }
 }
 
