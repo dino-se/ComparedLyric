@@ -4,105 +4,105 @@ class TrappedInThePast
     // Need 5 tab indent to work for some reason
     // TODO: Fix
     public static string TimedLyricsText { get; } = @"
-                [00:01.960]今
-                [00:02.460]私は息を吸っている
-                [00:04.380]今
-                [00:04.880]普通の生活を送って
-                [00:07.020]今
-                [00:07.520]私は上を向いている
-                [00:09.740]今
-                [00:10.240]飛行機が飛んでるわ
-                [00:12.400]今
-                [00:12.900]あの雲を追いかけたくて
-                [00:15.260]今
-                [00:15.760]走ろうにも動かなくて
-                [00:17.800]今
-                [00:18.300]立ち止まって 何になるんだ
-                [00:22.300]だって「今」は空っぽだから
-                [00:25.020]空っぽだから
-                [00:27.480]雨が降った後の香り
-                [00:30.080]何か思い出しそうで
-                [00:32.680]それは時間の浪費って
-                [00:35.260]何で分からないかね
-                [00:38.080]今にしか居られなくて
-                [00:40.580]当然、前だけが拓けて
-                [00:43.380]其処に沿って進めばいい
-                [00:46.080]そう思うことにしたけど
-                [00:49.860]黒 黒 黒 黒 黒だ
-                [00:53.040]黒 黒が襲って
-                [00:55.360]あの時は 遠いあの時は
-                [00:57.940]良かったなぁ
-                [01:00.600]過去に囚われている
-                [01:05.540]人生 人生 人生とか
-                [01:08.480]疾うの昔に完成してんだよ
-                [01:11.320]振り返ることでしか 証明しようが無いよ
-                [01:16.580]君も 地位も
-                [01:19.100]すべて失った今だ
-                [01:23.920]今
-                [01:24.500]私はあくびをしている
-                [01:26.500]今
-                [01:27.000]寝ぼけたまま準備をして
-                [01:29.080]今
-                [01:29.580]私は下を向いている
-                [01:31.940]今
-                [01:32.440]水たまりに映って
-                [01:34.600]今
-                [01:35.100]そのまま吸い込まれたくて
-                [01:37.140]今
-                [01:37.640]周りの目も気にしなくて
-                [01:39.640]今
-                [01:40.140]立ち止まって 何になるんだ
-                [01:44.400]だって「今」は空っぽだから
-                [01:47.020]空っぽだから
-                [01:49.260]黒 黒 黒 黒 黒だ
-                [01:52.420]黒 黒が襲って
-                [01:54.740]あの時は
-                [01:55.680]遠いあの時は
-                [01:57.360]良かったなぁ
-                [01:59.840]過去に囚われている
-                [02:04.600]人望 人望 人望とか
-                [02:07.940]今じゃ既に 手放してんだよ
-                [02:10.640]泣きじゃくることでしか 訴えようがないよ
-                [02:15.840]君も夢も
-                [02:18.460]すべて失った今だ
-                [02:28.600]今
-                [02:29.240]私は息を吸っている
-                [02:31.280]今
-                [02:31.780]普通の生活を送って
-                [02:33.940]今
-                [02:34.440]私は上を向いている
-                [02:36.580]今
-                [02:37.080]夕焼け、綺麗ね
-                [02:39.260]今
-                [02:39.760]あの雲を追いかけたくて
-                [02:41.780]今
-                [02:42.280]走ろうにも動かなくて
-                [02:44.540]今
-                [02:45.040]立ち止まって 何になるんだ
-                [02:49.060]だって「今」は空っぽだから
-                [02:51.580]空っぽだから
-                [02:53.280]後は死ぬだけ
-                [02:54.400]人生 人生 人生とか
-                [02:57.380]疾うの昔に完成してんだよ
-                [03:00.100]振り返ることでしか 証明しようがないよ
-                [03:04.960]最低 失敗したんだね
-                [03:08.040]後の祭りだ もう過ぎ去って
-                [03:10.740]枯れた木の葉みたいに宙を舞ってるよ
-                [03:15.840]君も 希望も
-                [03:18.300]すべて失った今だ
-                [03:23.280]今
-                [03:23.780]私は鬱ぎ込んでいる
-                [03:25.700]今
-                [03:26.200]私は息を吸っている
-                [03:28.340]今
-                [03:28.840]私は鬱ぎ込んでいる
-                [03:31.060]今
-                [03:31.560]砂浜に立っている
-                [03:33.800]今
-                [03:34.300]あの雲を追いかけたくて
-                [03:36.520]今
-                [03:37.020]広い海原を走って
-                [03:39.160]今
-                [03:39.660]立ち止まらない 私に出会えたね";
+                [00:01.960]Ima
+                [00:02.460]Watashi wa iki wo sutteiru
+                [00:04.380]Ima
+                [00:04.880]Futsuu no seikatsu okutte
+                [00:07.020]Ima
+                [00:07.520]Watashi wa ue wo muiteiru
+                [00:09.740]Ima
+                [00:10.240]Hikou ki ga tonderu wa
+                [00:12.400]Ima
+                [00:12.900]Ano kumo wo oikaketakute
+                [00:15.260]Ima
+                [00:15.760]Hashirou ni mo ugokanakute
+                [00:17.800]Ima
+                [00:18.300]Tachidomatte nanni narun da
+                [00:22.300]Datte “ima” wa karappo dakara
+                [00:25.020]Karappo dakara
+                [00:27.480]Ame ga futta ato no kaori
+                [00:30.080]Nanka omoidashisou de
+                [00:32.680]Sore wa jikan no rouhi tte
+                [00:35.260]Nande wakaranai ka ne
+                [00:38.080]Ima ni shika irarenakute
+                [00:40.580]Touzen, mae dake ga hirakete
+                [00:43.380]Soko ni sotte susumeba ii
+                [00:46.080]Sou omou koto ni shita kedo
+                [00:49.860]Kuro kuro kuro kuro kuro da
+                [00:53.040]Kuro kuro ga osotte
+                [00:55.360]Ano toki wa tooi ano toki wa
+                [00:57.940]Yokatta naa
+                [01:00.600]Kako ni torawareteiru
+                [01:05.540]Jinsei jinsei jinsei to ka
+                [01:08.480]Tou no mukashi ni kansei shiten da yo
+                [01:11.320]Furikaeru koto de shika shoumei shiyou ga nai yo
+                [01:16.580]Kimi mo chii mo
+                [01:19.100]Subete ushinatta ima da
+                [01:23.920]Ima
+                [01:24.500]Watashi wa akubi wo shiteiru
+                [01:26.500]Ima
+                [01:27.000]Neboketa mama junbi wo shite
+                [01:29.080]Ima
+                [01:29.580]Watashi wa shita wo muiteiru
+                [01:31.940]Ima
+                [01:32.440]Mizutamari ni utsutte
+                [01:34.600]Ima
+                [01:35.100]Sono mama suikomaretakute
+                [01:37.140]Ima
+                [01:37.640]Mawari no me mo ki ni shinakute
+                [01:39.640]Ima
+                [01:40.140]Tachidomatte nanni narun da
+                [01:44.400]Datte “ima” wa karappo dakara
+                [01:47.020]Karappo dakara
+                [01:49.260]Kuro kuro kuro kuro kuro da
+                [01:52.420]Kuro kuro ga osotte
+                [01:54.740]Ano toki wa
+                [01:55.680]Tooi ano toki wa
+                [01:57.360]Yokatta naa
+                [01:59.840]Kako ni torawareteiru
+                [02:04.600]Jinbou jinbou jinbou to ka
+                [02:07.940]Ima ja sude ni tebanashiten da yo
+                [02:10.640]Nakijakuru koto de shika uttae you ga nai yo
+                [02:15.840]Kimi mo yume mo
+                [02:18.460]Subete ushinatta ima da
+                [02:28.600]Ima
+                [02:29.240]Watashi wa iki wo sutteiru
+                [02:31.280]Ima
+                [02:31.780]Futsuu no seikatsu okutte
+                [02:33.940]Ima
+                [02:34.440]Watashi wa ue wo muiteiru
+                [02:36.580]Ima
+                [02:37.080]Yuuyake, kirei ne
+                [02:39.260]Ima
+                [02:39.760]Ano kumo wo oikaketakute
+                [02:41.780]Ima
+                [02:42.280]Hashirou ni mo ugokanakute
+                [02:44.540]Ima
+                [02:45.040]Tachidomatte nanni narun da
+                [02:49.060]Datte “ima” wa karappo dakara
+                [02:51.580]Karappo dakara
+                [02:53.280]Ato wa shinu dake
+                [02:54.400]Jinsei jinsei jinsei to ka
+                [02:57.380]Tou no mukashi ni kansei shiten da yo
+                [03:00.100]Furikaeru koto de shika shoumei shiyou ga nai yo
+                [03:04.960]Saitei shippai shitan da ne
+                [03:08.040]Ato no matsuri da mou sugisatte
+                [03:10.740]Kareta konoha mitai ni chuu wo matteru yo
+                [03:15.840]Kimi mo kibou mo
+                [03:18.300]Subete ushinatta ima da
+                [03:23.280]Ima
+                [03:23.780]Watashi wa fusagikondeiru
+                [03:25.700]Ima
+                [03:26.200]Watashi wa iki wo sutteiru
+                [03:28.340]Ima
+                [03:28.840]Watashi wa iki wo sutteiru
+                [03:31.060]Ima
+                [03:31.560]Sunahama ni tatteiru
+                [03:33.800]Ima
+                [03:34.300]Ano kumo wo oikaketakute
+                [03:36.520]Ima
+                [03:37.020]Hiroi unabara wo hashitte
+                [03:39.160]Ima
+                [03:39.660]Tachidomaranai watashi ni deaeta ne";
 }
 
