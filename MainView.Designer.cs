@@ -114,7 +114,7 @@
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Controls.Add(this.lblLyrics);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(49, 381);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(49, 390);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(519, 71);
             this.flowLayoutPanel1.TabIndex = 7;
