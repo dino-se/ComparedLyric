@@ -113,9 +113,11 @@ namespace ComparedLyric
         {
             flp_SongList.Controls.Clear();
 
-            SongListControl[] listSongs = new SongListControl[7];
+            const int songIndex = 7;
 
-            string[] songTitle = new string[7] {
+            SongListControl[] listSongs = new SongListControl[songIndex];
+
+            string[] songTitle = new string[songIndex] {
                 "Compared Child",
                 "Trapped in the Past",
                 "Hide and Seek Alone",
@@ -123,7 +125,7 @@ namespace ComparedLyric
                 "Under the Summer Breeze",
                 "Compared Child (TUYU Remix)",
                 "Under Heroine"};
-            string[] songTime = new string[7] {
+            string[] songTime = new string[songIndex] {
                 "3:36", "3:51", "3:13", "4:07","N/A", "3:27", "N/A"};
             Image[] songIcon = new Image[7] {
                 Resources.Compared_Child,
@@ -168,7 +170,7 @@ namespace ComparedLyric
                         PlaySong("It's Raining After All", ItsRainingAfterAll.TimedLyricsText, "D0ehC_8sQuU");
                         break;
                     case "Under the Summer Breeze":
-                        PlaySong("It's Raining After All", UnderTheSummerBreeze.TimedLyricsText, "LoK17z6xDwI");
+                        PlaySong("Under the Summer Breeze", UnderTheSummerBreeze.TimedLyricsText, "LoK17z6xDwI");
                         break;
                     case "Compared Child (TUYU Remix)":
                         PlaySong("Compared Child (TUYU Remix)", ComparedChild.TimedLyricsText, "4TmzJzGXbB4");
