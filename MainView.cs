@@ -113,22 +113,24 @@ namespace ComparedLyric
         {
             flp_SongList.Controls.Clear();
 
-            SongListControl[] listSongs = new SongListControl[5];
+            SongListControl[] listSongs = new SongListControl[6];
 
-            string[] songTitle = new string[5] {
+            string[] songTitle = new string[6] {
                 "Compared Child",
                 "Trapped in the Past",
                 "Hide and Seek Alone",
                 "It's Raining After All",
-                "Compared Child (TUYU Remix)"};
-            string[] songTime = new string[5] {
-                "3:36", "3:51", "3:13", "4:07", "3:27"};
-            Image[] songIcon = new Image[5] {
+                "Compared Child (TUYU Remix)",
+                "Under Heroine"};
+            string[] songTime = new string[6] {
+                "3:36", "3:51", "3:13", "4:07", "3:27", "N/A"};
+            Image[] songIcon = new Image[6] {
                 Resources.Compared_Child,
                 Resources.Trapped_In_The_Past,
                 Resources.Trapped_In_The_Past,
                 Resources.Compared_Child,
-                Resources.Compared_Child_Remix };
+                Resources.Compared_Child_Remix,
+                Resources.Compared_Child};
 
             for (int i = 0; i < listSongs.Length; i++)
             {
@@ -165,6 +167,9 @@ namespace ComparedLyric
                         break;
                     case "Compared Child (TUYU Remix)":
                         PlaySong("Compared Child (TUYU Remix)", ComparedChild.TimedLyricsText, "4TmzJzGXbB4");
+                        break;
+                    case "Under Heroine":
+                        PlaySong("Compared Child (TUYU Remix)", ComparedChild.TimedLyricsText, "mHnt8TVbC9M");
                         break;
                     default:
                         break;
