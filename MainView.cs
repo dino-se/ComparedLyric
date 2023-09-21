@@ -113,7 +113,7 @@ namespace ComparedLyric
         {
             flp_SongList.Controls.Clear();
 
-            const int songIndex = 7;
+            const int songIndex = 8;
 
             SongListControl[] listSongs = new SongListControl[songIndex];
 
@@ -123,14 +123,16 @@ namespace ComparedLyric
                 "Hide and Seek Alone",
                 "It's Raining After All",
                 "Under the Summer Breeze",
+                "I'm getting on the bus to the other world, see ya!",
                 "Compared Child (TUYU Remix)",
                 "Under Heroine"};
             string[] songTime = new string[songIndex] {
-                "3:36", "3:51", "3:13", "4:07","N/A", "3:27", "N/A"};
-            Image[] songIcon = new Image[7] {
+                "3:36", "3:51", "3:13", "4:07","N/A", "N/A", "3:27", "N/A"};
+            Image[] songIcon = new Image[songIndex] {
                 Resources.Compared_Child,
                 Resources.Trapped_In_The_Past,
                 Resources.Trapped_In_The_Past,
+                Resources.Compared_Child,
                 Resources.Compared_Child,
                 Resources.Compared_Child,
                 Resources.Compared_Child_Remix,
@@ -171,6 +173,9 @@ namespace ComparedLyric
                         break;
                     case "Under the Summer Breeze":
                         PlaySong("Under the Summer Breeze", UnderTheSummerBreeze.TimedLyricsText, "LoK17z6xDwI");
+                        break;
+                    case "I'm getting on the bus to the other world, see ya!":
+                        PlaySong("I'm getting on the bus to the other world, see ya!", UnderTheSummerBreeze.TimedLyricsText, "4QXCPuwBz2E");
                         break;
                     case "Compared Child (TUYU Remix)":
                         PlaySong("Compared Child (TUYU Remix)", ComparedChild.TimedLyricsText, "4TmzJzGXbB4");
