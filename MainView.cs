@@ -121,7 +121,8 @@ namespace ComparedLyric
                 "Hide and Seek Alone",
                 "It's Raining After All",
                 "Compared Child (TUYU Remix)"};
-            string[] songTime = new string[5] { "3:36", "3:51", "3:13", "4:07", "3:27"};
+            string[] songTime = new string[5] {
+                "3:36", "3:51", "3:13", "4:07", "3:27"};
             Image[] songIcon = new Image[5] {
                 Resources.Compared_Child,
                 Resources.Trapped_In_The_Past,
@@ -131,11 +132,12 @@ namespace ComparedLyric
 
             for (int i = 0; i < listSongs.Length; i++)
             {
-                listSongs[i] = new SongListControl();
-
-                listSongs[i].SongIcon = songIcon[i];
-                listSongs[i].SongTitle = songTitle[i];
-                listSongs[i].SongTime = songTime[i];
+                listSongs[i] = new SongListControl()
+                {
+                    SongIcon = songIcon[i],
+                    SongTitle = songTitle[i],
+                    SongTime = songTime[i]
+                };
 
                 flp_SongList.Controls.Add(listSongs[i]);
 
