@@ -30,10 +30,12 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pb_SongListIcon = new System.Windows.Forms.PictureBox();
-            this.lbl_SongListTitle = new System.Windows.Forms.Label();
             this.lbl_SongListTime = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lbl_SongListTitle = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_SongListIcon)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,19 +61,6 @@
             this.pb_SongListIcon.MouseEnter += new System.EventHandler(this.ucRequest_MouseEnter);
             this.pb_SongListIcon.MouseLeave += new System.EventHandler(this.ucRequest_MouseLeave);
             // 
-            // lbl_SongListTitle
-            // 
-            this.lbl_SongListTitle.AutoSize = true;
-            this.lbl_SongListTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SongListTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(100)))), ((int)(((byte)(189)))));
-            this.lbl_SongListTitle.Location = new System.Drawing.Point(93, 25);
-            this.lbl_SongListTitle.Name = "lbl_SongListTitle";
-            this.lbl_SongListTitle.Size = new System.Drawing.Size(32, 13);
-            this.lbl_SongListTitle.TabIndex = 1;
-            this.lbl_SongListTitle.Text = "Title";
-            this.lbl_SongListTitle.MouseEnter += new System.EventHandler(this.ucRequest_MouseEnter);
-            this.lbl_SongListTitle.MouseLeave += new System.EventHandler(this.ucRequest_MouseLeave);
-            // 
             // lbl_SongListTime
             // 
             this.lbl_SongListTime.AutoSize = true;
@@ -84,13 +73,32 @@
             this.lbl_SongListTime.MouseEnter += new System.EventHandler(this.ucRequest_MouseEnter);
             this.lbl_SongListTime.MouseLeave += new System.EventHandler(this.ucRequest_MouseLeave);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.lbl_SongListTitle);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(90, 14);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(171, 31);
+            this.flowLayoutPanel1.TabIndex = 3;
+            // 
+            // lbl_SongListTitle
+            // 
+            this.lbl_SongListTitle.AutoSize = true;
+            this.lbl_SongListTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SongListTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(100)))), ((int)(((byte)(189)))));
+            this.lbl_SongListTitle.Location = new System.Drawing.Point(3, 0);
+            this.lbl_SongListTitle.Name = "lbl_SongListTitle";
+            this.lbl_SongListTitle.Size = new System.Drawing.Size(32, 13);
+            this.lbl_SongListTitle.TabIndex = 2;
+            this.lbl_SongListTitle.Text = "Title";
+            // 
             // SongListControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(233)))), ((int)(((byte)(238)))));
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.lbl_SongListTime);
-            this.Controls.Add(this.lbl_SongListTitle);
             this.Controls.Add(this.panel1);
             this.Name = "SongListControl";
             this.Size = new System.Drawing.Size(270, 85);
@@ -98,6 +106,8 @@
             this.MouseLeave += new System.EventHandler(this.ucRequest_MouseLeave);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_SongListIcon)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,7 +117,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pb_SongListIcon;
-        private System.Windows.Forms.Label lbl_SongListTitle;
         private System.Windows.Forms.Label lbl_SongListTime;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label lbl_SongListTitle;
     }
 }
