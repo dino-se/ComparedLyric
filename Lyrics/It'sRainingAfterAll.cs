@@ -11,7 +11,6 @@ class ItsRainingAfterAll
                 [00:08.060]Hōka no CHAIMU ga nattatte
                 [00:09.820]Kimi no yokogao de kikoenakute
                 [00:11.600]Mou yūtōsei ni wa dekinai koto nanda
-                [00:13.860]""Yappari ame wa furu nda ne""
                 [00:15.780]Koe ni dasu no wa kantan de
                 [00:17.180]Demo tsutaeru no wa muzukashikute
                 [00:19.180]Hontō datte wakannai no?
@@ -39,10 +38,6 @@ class ItsRainingAfterAll
                 [01:12.500]Mata ne mata ne tte warau yō ni
                 [01:15.180]Shagami konde shimatta
                 [01:16.740]
-                [01:20.440]Sakushi sakkyoku/henkyoku/Guitar/Mix&Mastering: Pusu
-                [01:24.040]Illustration: Omu Tatsu
-                [01:25.920]Movie: AzyuN
-                [01:28.100]Vocal: Rei
                 [01:31.360]Kyō no tenki wa hare datte?
                 [01:32.940]Utagatte matte kasa o motta
                 [01:35.020]TŌTO BAGGU RYUKKUSAKKU
@@ -69,10 +64,6 @@ class ItsRainingAfterAll
                 [02:28.000]Iya iya tte tomaru yō ni
                 [02:30.920]Urete shimatta
                 [02:32.300]
-                [02:34.180](Tsuyu 1st Full Album February 19 Release)
-                [02:36.000](Animate Kōnyū Tokken: Akōsutikku Arenji CD)
-                [02:37.920](Tawārekōdo Kōnyū Tokken: Kuria Fairu)
-                [02:39.820]
                 [02:46.380]Dakedo
                 [02:47.000]Yappari ame wa furu nda ne
                 [02:50.200]Tō ni karete shimatta tte mada tsuyu da yo
@@ -93,8 +84,6 @@ class ItsRainingAfterAll
                 [03:28.140]Afuredashite shimatta n da
                 [03:30.140]Sayonara da
                 [03:31.340]
-                [03:38.740]""Yappari ame wa furu nda ne""
-                [03:46.020]
                 [04:00.620]Mata ne mata ne tte waraetan da";
 }
 
