@@ -127,7 +127,7 @@ namespace ComparedLyric
                 "Compared Child (TUYU Remix)",
                 "Under Heroine"};
             string[] songTime = new string[songIndex] {
-                "3:36", "3:51", "3:13", "4:07","N/A", "N/A", "3:27", "N/A"};
+                "3:36", "3:51", "3:13", "4:07","3:23", "3:15", "3:27", "N/A"};
             Image[] songIcon = new Image[songIndex] {
                 Resources.Compared_Child,
                 Resources.Trapped_In_The_Past,
