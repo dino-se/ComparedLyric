@@ -175,7 +175,7 @@ namespace ComparedLyric
                         PlaySong("Under the Summer Breeze", UnderTheSummerBreeze.TimedLyricsText, "LoK17z6xDwI");
                         break;
                     case "I'm getting on the bus to the other world, see ya!":
-                        PlaySong("I'm getting on the bus to the other world, see ya!", UnderTheSummerBreeze.TimedLyricsText, "4QXCPuwBz2E");
+                        PlaySong("I'm getting on the bus to the other world, see ya!", BusToTheOtherWorld.TimedLyricsText, "4QXCPuwBz2E");
                         break;
                     case "Compared Child (TUYU Remix)":
                         PlaySong("Compared Child (TUYU Remix)", ComparedChild.TimedLyricsText, "4TmzJzGXbB4");
