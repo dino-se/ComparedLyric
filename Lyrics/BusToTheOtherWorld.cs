@@ -4,77 +4,77 @@ class BusToTheOtherWorld
     // Need 5 tab indent to work for some reason
     // TODO: Fix
     public static string TimedLyricsText { get; } = @"
-                [00:00.600]あの世行きのバスに乗ってさらば。
-                [00:04.600]あの世行きのバスに乗ってさらば。ーツユ
-                [00:12.000]幼い頃 殺めた命は
-                [00:14.800]数えきれず
-                [00:16.400]小さな命を葬っては
-                [00:18.400]平然と笑って帰路についた
-                [00:20.400]今になって考えたら
-                [00:22.600]真っ先に死ぬのは
-                [00:24.820]あぁぁ　私でよかった
-                [00:27.800]うらうら
-                [00:28.600]とした周りの空気が濃くて
-                [00:32.000]存在価値を奪うでしょ
-                [00:35.500]生命線とか
-                [00:36.600]無駄に長いだけで
-                [00:37.800]何の役にも立たない
-                [00:39.400]ただのしわだよ
-                [00:40.800]心の奥がしょうもない
-                [00:42.400]人生観を
-                [00:44.260]嘆いているの
-                [00:45.400]耳に刺さる理想
-                [00:46.680]吐き捨てて
-                [00:48.160]消えてしまいたい生涯なんてもんに
-                [00:50.400]どんな値が付いて
-                [00:52.100]自己中心的だって？
-                [00:53.800]思いの欠片も
-                [00:54.400]知らないで
-                [00:56.200]どうせ向こう数十年経った先では
-                [00:58.600]煙たがれて
-                [01:00.000]なら私を刺して殺して奪って去って
-                [01:02.600]あの世行きのバスに乗ってさらば。
-                [01:14.000]幼い頃 馬鹿にされたことも忘れきれず
-                [01:18.200]身に覚えのない理不尽さが
-                [01:20.400]から離れてくれないんだ
-                [01:22.400]今になって考えたら
-                [01:24.800]何故飲み込んだのか
-                [01:26.780]あぁぁ　歯向かえばよかった
-                [01:29.600]もやもや
-                [01:30.800]とした人混みの中を這って
-                [01:34.000]存在価値を示すのよ
-                [01:37.600]幸福論とか
-                [01:38.800]無駄に深いだけで
-                [01:40.000]何の役にも立たない
-                [01:41.400]ただの文字だよ
-                [01:42.800]浅い心がパッとしない焦燥感に
-                [01:46.040]駆られているの
-                [01:47.400]時だけが経って
-                [01:48.500]戻れないな
-                [01:50.000]消えてしまいたい生涯なんてもんに
-                [01:52.600]どんな芽が生えて
-                [01:54.000]面倒くさい奴だって？
-                [01:55.600]お前の声とか
-                [01:56.600]要らないわ
-                [01:58.040]どうせ向こう数十年経った先まで
-                [02:00.600]持ち越すだけ
-                [02:02.000]なら私を刺して殺して奪って去って
-                [02:24.060]消えてしまいたい生涯なんてもんに意味はあるんですか？
-                [02:32.200]消えてしまいたい生涯なんてもんに夢はあるんですか？
-                [02:38.720]無いじゃん。
-                [02:40.700]消えてしまいたい生涯なんてもんに
-                [02:42.400]なんてもんにどんな値が付いて
-                [02:44.200]辛いよね 分かるよだって？
-                [02:45.600]分かったようなこと
-                [02:46.700]言わないで
-                [02:48.200]どうせ向こう数十年経った先でも
-                [02:50.600]嘆いていて
-                [02:52.000]なら私を刺して殺して奪って去って
-                [02:55.000]それが
-                [02:58.000]私に出来る
-                [03:00.000]最初で最後の悪あがきだ
-                [03:03.000]あの世行きのバスに乗ってさらば。
-                [03:06.400]でも私は悔いて叫んで雨が降って
-                [03:09.400]ツユ";
+                [00:00.600]Ano yo-iki no basu ni notte saraba.
+                [00:04.600]Ano yo-iki no basu ni notte saraba. - Tsuyu
+                [00:12.000]Osanai koro ayameta inochi wa
+                [00:14.800]Kazoe kirezu
+                [00:16.400]Chiisana inochi o hōmuttera
+                [00:18.400]Heizen to waratte kiro ni tsuita
+                [00:20.400]Ima ni natte kangaetara
+                [00:22.600]Massaki ni shinu no wa
+                [00:24.820]Aā watashi de yokatta
+                [00:27.800]Uraura
+                [00:28.600]To shita mawari no kūki ga koku te
+                [00:32.000]Sonzai kachi o ubau desho
+                [00:35.500]Seimeisen toka
+                [00:36.600]Muda ni nagai dake de
+                [00:37.800]Nan no yaku ni mo tatanai
+                [00:39.400]Tada no shiwa da yo
+                [00:40.800]Kokoro no oku ga shōmonai
+                [00:42.400]Jinsei-kan o
+                [00:44.260]Nageite iru no
+                [00:45.400]Mimi ni sasaru risō
+                [00:46.680]Hakisutete
+                [00:48.160]Kiete shimaitai shōgai nante mon ni
+                [00:50.400]Donna ne ga tsuite
+                [00:52.100]Jikochūshin-tekidatte?
+                [00:53.800]Omoi no kakera mo
+                [00:54.400]Shiranai de
+                [00:56.200]Dōse mukō sūjūnen tatta saki de wa
+                [00:58.600]Kemutagarete
+                [01:00.000]Nara watashi o sashite koroshite ubatte satte
+                [01:02.600]Ano yo-iki no basu ni notte saraba.
+                [01:14.000]Osanai koro baka ni sareta koto mo wasure kirezu
+                [01:18.200]Mi ni oboe no nai rifujinsa ga
+                [01:20.400]Kara hanarete kurenai nda
+                [01:22.400]Ima ni natte kangaetara
+                [01:24.800]Naze nomikonda no ka
+                [01:26.780]Aā hē mukaeba yokatta
+                [01:29.600]Moyamoya
+                [01:30.800]To shita hitogomi no naka o hatte
+                [01:34.000]Sonzai kachi o shimesu no yo
+                [01:37.600]Kōfukuron toka
+                [01:38.800]Muda ni fukai dake de
+                [01:40.000]Nan no yaku ni mo tatanai
+                [01:41.400]Tada no moji da yo
+                [01:42.800]Asai kokoro ga patto shinai shōsōkan ni
+                [01:46.040]Karareru nda
+                [01:47.400]Toki dake ga tatte
+                [01:48.500]Modorenai na
+                [01:50.000]Kiete shimaitai shōgai nante mon ni
+                [01:52.600]Donna me ga haete
+                [01:54.000]Mendōkusai yatsu datte?
+                [01:55.600]Omae no koe toka
+                [01:56.600]Iranai wa
+                [01:58.040]Dōse mukō sūjūnen tatta saki made
+                [02:00.600]Mochikosu dake
+                [02:02.000]Nara watashi o sashite koroshite ubatte satte
+                [02:24.060]Kiete shimaitai shōgai nante mon ni imi wa aru ndesu ka?
+                [02:32.200]Kiete shimaitai shōgai nante mon ni yume wa aru ndesu ka?
+                [02:38.720]Nai jan.
+                [02:40.700]Kiete shimaitai shōgai nante mon ni
+                [02:42.400]Nante mon ni donna ne ga tsuite
+                [02:44.200]Tsurai yo ne wakaru yo datte?
+                [02:45.600]Wakatta yō na koto
+                [02:46.700]Iwanai de
+                [02:48.200]Dōse mukō sūjūnen tatta saki demo
+                [02:50.600]Nageite ite
+                [02:52.000]Nara watashi o sashite koroshite ubatte satte
+                [02:55.000]Sore ga
+                [02:58.000]Watashi ni dekiru
+                [03:00.000]Saisho de saigo no akuagaki da
+                [03:03.000]Ano yo-iki no basu ni notte saraba.
+                [03:06.400]Demo watashi wa kuite sakende ame ga futte
+                [03:09.400]Tsuyu";
 }
 
