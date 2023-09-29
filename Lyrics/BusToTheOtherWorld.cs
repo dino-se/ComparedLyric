@@ -5,7 +5,6 @@ class BusToTheOtherWorld
     // TODO: Fix
     public static string TimedLyricsText { get; } = @"
                 [00:00.600]Ano yo-iki no basu ni notte saraba.
-                [00:04.600]Ano yo-iki no basu ni notte saraba. - Tsuyu
                 [00:12.000]Osanai koro ayameta inochi wa
                 [00:14.800]Kazoe kirezu
                 [00:16.400]Chiisana inochi o hōmuttera
