@@ -117,17 +117,17 @@ namespace ComparedLyric
 
             SongListControl[] listSongs = new SongListControl[songIndex];
 
-            string[] songTitle = new string[songIndex] {
-                "Compared Child",
-                "Trapped in the Past",
-                "Hide and Seek Alone",
-                "It's Raining After All",
-                "Under the Summer Breeze",
-                "I'm getting on the bus to the other world, see ya!",
-                "Compared Child (TUYU Remix)",
-                "Under Heroine"};
-            string[] songTime = new string[songIndex] {
-                "3:36", "3:51", "3:13", "4:07","3:23", "3:15", "3:27", "N/A"};
+            string[,] songsList = new string[songIndex, 2] {
+                { "Compared Child","3:36" },
+                { "Trapped in the Past","3:51" },
+                { "Hide and Seek Alone","3:13" },
+                { "It's Raining After All","4:07" },
+                { "Under the Summer Breeze","3:23" },
+                { "I'm getting on the bus to the other world, see ya!","3:15" },
+                { "Compared Child (TUYU Remix)","3:27" },
+                { "Under Heroine","N/A" },
+            };
+
             Image[] songIcon = new Image[songIndex] {
                 Resources.Compared_Child,
                 Resources.Trapped_In_The_Past,
@@ -143,8 +143,8 @@ namespace ComparedLyric
                 listSongs[i] = new SongListControl()
                 {
                     SongIcon = songIcon[i],
-                    SongTitle = songTitle[i],
-                    SongTime = songTime[i]
+                    SongTitle = songsList[i, 0],
+                    SongTime = songsList[i, 1]
                 };
 
                 flp_SongList.Controls.Add(listSongs[i]);
