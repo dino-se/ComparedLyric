@@ -2,7 +2,6 @@
 using CefSharp;
 using System;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Threading.Tasks;
 
 namespace ComparedLyric
@@ -14,16 +13,16 @@ namespace ComparedLyric
             InitializeComponent();
         }
 
-        private void SplashScreen_Load(object sender, EventArgs e)
+        private async void SplashScreen_Load(object sender, EventArgs e)
         {
             var settings = new CefSettings();
             settings.CefCommandLineArgs.Add("autoplay-policy", "no-user-gesture-required");
             Cef.Initialize(settings);
 
-            OpenMainViewAfterDelay();
+            await OpenMainViewAfterDelay();
         }
 
-        private async void OpenMainViewAfterDelay()
+        private async Task OpenMainViewAfterDelay()
         {
             await Task.Delay(3000);
 
