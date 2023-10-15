@@ -4,6 +4,7 @@ using ComparedLyric.Properties;
 using System;
 using System.Drawing;
 using System.Reflection.Emit;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ComparedLyric
@@ -119,12 +120,12 @@ namespace ComparedLyric
 
             string[,] songsList = new string[songIndex, 2] {
                 { "Compared Child","3:36" },
-                { "Trapped in the Past","3:51" },
-                { "Hide and Seek Alone","3:13" },
+                { "Trapped in the Past","3:50" },
+                { "Hide and Seek Alone","3:14" },
                 { "It's Raining After All","4:07" },
                 { "Under the Summer Breeze","3:23" },
-                { "I'm getting on the bus to the other world, see ya!","3:15" },
-                { "Compared Child (TUYU Remix)","3:27" },
+                { "I'm getting on the bus to the other world, see ya!","3:16" },
+                { "Compared Child (TUYU Remix)","3:36" },
                 { "Under Heroine","N/A" },
             };
 
@@ -153,35 +154,35 @@ namespace ComparedLyric
             }
         }
 
-        void SongControl_Click(object sender, EventArgs e)
+        async void SongControl_Click(object sender, EventArgs e)
         {
             if (sender is SongListControl songControl)
             {
                 switch (songControl.SongTitle)
                 {
                     case "Compared Child":
-                        PlaySong("Compared Child", ComparedChild.TimedLyricsText, "olWvy0PiLfA");
+                        await PlaySong("Compared Child", ComparedChild.TimedLyricsText, "olWvy0PiLfA");
                         break;
                     case "Trapped in the Past":
-                        PlaySong("Trapped in the Past", TrappedInThePast.TimedLyricsText, "lGFEqEFJ410");
+                        await PlaySong("Trapped in the Past", TrappedInThePast.TimedLyricsText, "lGFEqEFJ410");
                         break;
                     case "Hide and Seek Alone":
-                        PlaySong("Hide and Seek Alone", HideAndSeekAlone.TimedLyricsText, "Bq0ZINOzVng");
+                        await PlaySong("Hide and Seek Alone", HideAndSeekAlone.TimedLyricsText, "Bq0ZINOzVng");
                         break;
                     case "It's Raining After All":
-                        PlaySong("It's Raining After All", ItsRainingAfterAll.TimedLyricsText, "D0ehC_8sQuU");
+                        await PlaySong("It's Raining After All", ItsRainingAfterAll.TimedLyricsText, "D0ehC_8sQuU");
                         break;
                     case "Under the Summer Breeze":
-                        PlaySong("Under the Summer Breeze", UnderTheSummerBreeze.TimedLyricsText, "LoK17z6xDwI");
+                        await PlaySong("Under the Summer Breeze", UnderTheSummerBreeze.TimedLyricsText, "LoK17z6xDwI");
                         break;
                     case "I'm getting on the bus to the other world, see ya!":
-                        PlaySong("I'm getting on the bus to the other world, see ya!", BusToTheOtherWorld.TimedLyricsText, "4QXCPuwBz2E");
+                        await PlaySong("I'm getting on the bus to the other world, see ya!", BusToTheOtherWorld.TimedLyricsText, "4QXCPuwBz2E");
                         break;
                     case "Compared Child (TUYU Remix)":
-                        PlaySong("Compared Child (TUYU Remix)", ComparedChild.TimedLyricsText, "4TmzJzGXbB4");
+                        await PlaySong("Compared Child (TUYU Remix)", ComparedChild.TimedLyricsText, "4TmzJzGXbB4");
                         break;
                     case "Under Heroine":
-                        PlaySong("Compared Child (TUYU Remix)", ComparedChild.TimedLyricsText, "mHnt8TVbC9M");
+                        await PlaySong("Compared Child (TUYU Remix)", ComparedChild.TimedLyricsText, "mHnt8TVbC9M");
                         break;
                     default:
                         break;
@@ -189,12 +190,15 @@ namespace ComparedLyric
             }
         }
 
-        private void PlaySong(string songTitle, string timedLyricsText, string videoId)
+        private async Task PlaySong(string songTitle, string timedLyricsText, string videoId)
         {
-            lyricsLines = timedLyricsText.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-            lbl_Title.Text = songTitle;
-            string embedUrl = $"https://www.youtube.com/embed/{videoId}?autoplay=1";
-            chromiumWebBrowser1.Load(embedUrl);
+            await Task.Run(() =>
+            {
+                lyricsLines = timedLyricsText.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+                lbl_Title.Text = songTitle;
+                string embedUrl = $"https://www.youtube.com/embed/{videoId}?autoplay=1";
+                chromiumWebBrowser1.Load(embedUrl);
+            });
         }
     }
 }
