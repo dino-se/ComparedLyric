@@ -11,42 +11,16 @@ namespace ComparedLyric
 {
     public partial class MainView : Form
     {
-        private string[] lyricsLines;
+        private readonly TimedLyrics timedLyrics;
         private double videoStartTime = 0;
         private bool isVideoStarted = false;
-
         public MainView()
         {
             InitializeComponent();
-            InitializeTimedLyrics();
+            timedLyrics = new TimedLyrics();
             GenerateSongList();
         }
-
-        private void InitializeTimedLyrics()
-        {
-            
-        }
-
-        private bool ParseTimestamp(string line, out TimeSpan timestamp, out string lyricsText)
-        {
-            int startPos = line.IndexOf('[');
-            int endPos = line.IndexOf(']');
-
-            if (startPos >= 0 && endPos > startPos)
-            {
-                string timestampStr = line.Substring(startPos + 1, endPos - startPos - 1);
-                lyricsText = line.Substring(endPos + 1).Trim();
-
-                if (TimeSpan.TryParseExact(timestampStr, @"mm\:ss\.fff", null, out timestamp))
-                {
-                    return true;
-                }
-            }
-
-            timestamp = TimeSpan.Zero;
-            lyricsText = string.Empty;
-            return false;
-        }
+        
 
         private void tmrRefreshData_Tick(object sender, EventArgs e)
         {
@@ -79,12 +53,12 @@ namespace ComparedLyric
                             return;
 
                         double elapsedTime = currentTime - videoStartTime;
-                        int currentLineIndex = FindLyricsLineIndexByTime(elapsedTime);
+                        int currentLineIndex = timedLyrics.FindLyricsLineIndexByTime(elapsedTime);
 
-                        if (currentLineIndex >= 0 && currentLineIndex < lyricsLines.Length)
+                        if (currentLineIndex >= 0 && currentLineIndex < timedLyrics.lyricsLines.Length)
                         {
-                            string currentLine = lyricsLines[currentLineIndex].Substring(10);
-                            if (ParseTimestamp(currentLine, out _, out string lyricsText))
+                            string currentLine = timedLyrics.lyricsLines[currentLineIndex].Substring(10);
+                            if (timedLyrics.ParseTimestamp(currentLine, out _, out string lyricsText))
                             {
                                 lblLyrics.Visible = true;
                                 lblLyrics.Text = lyricsText;
@@ -93,21 +67,6 @@ namespace ComparedLyric
                     }));
                 }
             });
-        }
-
-        private int FindLyricsLineIndexByTime(double elapsedTime)
-        {
-            for (int i = 0; i < lyricsLines.Length; i++)
-            {
-                if (ParseTimestamp(lyricsLines[i], out TimeSpan timestamp, out _))
-                {
-                    if (elapsedTime * 1000 <= timestamp.TotalMilliseconds)
-                    {
-                        return i - 1;
-                    }
-                }
-            }
-            return lyricsLines.Length - 1;
         }
 
         private void GenerateSongList()
@@ -194,7 +153,7 @@ namespace ComparedLyric
         {
             await Task.Run(() =>
             {
-                lyricsLines = timedLyricsText.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+                timedLyrics.lyricsLines = timedLyricsText.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
                 lbl_Title.Text = songTitle;
                 string embedUrl = $"https://www.youtube.com/embed/{videoId}?autoplay=1";
                 chromiumWebBrowser1.Load(embedUrl);
