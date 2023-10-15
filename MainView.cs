@@ -85,7 +85,7 @@ namespace ComparedLyric
                 { "Under the Summer Breeze","3:23" },
                 { "I'm getting on the bus to the other world, see ya!","3:16" },
                 { "Compared Child (TUYU Remix)","3:36" },
-                { "Under Heroine","N/A" },
+                { "Being low as dirt, taking what's important from me","3:13" },
             };
 
             Image[] songIcon = new Image[songIndex] {
@@ -140,8 +140,8 @@ namespace ComparedLyric
                     case "Compared Child (TUYU Remix)":
                         await PlaySong("Compared Child (TUYU Remix)", ComparedChild.TimedLyricsText, "4TmzJzGXbB4");
                         break;
-                    case "Under Heroine":
-                        await PlaySong("Compared Child (TUYU Remix)", ComparedChild.TimedLyricsText, "mHnt8TVbC9M");
+                    case "Being low as dirt, taking what's important from me":
+                        await PlaySong("Being low as dirt, taking what's important from me", ComparedChild.TimedLyricsText, "M7FH1dL51oU");
                         break;
                     default:
                         break;
