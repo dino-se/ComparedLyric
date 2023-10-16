@@ -73,7 +73,7 @@ namespace ComparedLyric
         {
             flp_SongList.Controls.Clear();
 
-            const int songIndex = 8;
+            const int songIndex = 9;
 
             SongListControl[] listSongs = new SongListControl[songIndex];
 
@@ -83,8 +83,9 @@ namespace ComparedLyric
                 { "Hide and Seek Alone","3:14" },
                 { "It's Raining After All","4:07" },
                 { "Under the Summer Breeze","3:23" },
-                { "I'm getting on the bus to the other world, see ya!","3:16" },
                 { "Compared Child (TUYU Remix)","3:36" },
+                { "If There Was An Endpoint.","3:00" },
+                { "I'm getting on the bus to the other world, see ya!","3:16" },
                 { "Being low as dirt, taking what's important from me","3:13" },
             };
 
@@ -94,8 +95,9 @@ namespace ComparedLyric
                 Resources.Trapped_In_The_Past,
                 Resources.Compared_Child,
                 Resources.Compared_Child,
-                Resources.Compared_Child,
                 Resources.Compared_Child_Remix,
+                Resources.Compared_Child,
+                Resources.Compared_Child,
                 Resources.Compared_Child};
 
             for (int i = 0; i < listSongs.Length; i++)
@@ -134,6 +136,9 @@ namespace ComparedLyric
                     case "Under the Summer Breeze":
                         await PlaySong("Under the Summer Breeze", UnderTheSummerBreeze.TimedLyricsText, "LoK17z6xDwI");
                         break;
+                    case "If There Was An Endpoint.":
+                        await PlaySong("If There Was An Endpoint.", UnderTheSummerBreeze.TimedLyricsText, "vcw5THyM7Jo");
+                        break;
                     case "I'm getting on the bus to the other world, see ya!":
                         await PlaySong("I'm getting on the bus to the other world, see ya!", BusToTheOtherWorld.TimedLyricsText, "4QXCPuwBz2E");
                         break;
@@ -141,7 +146,7 @@ namespace ComparedLyric
                         await PlaySong("Compared Child (TUYU Remix)", ComparedChild.TimedLyricsText, "4TmzJzGXbB4");
                         break;
                     case "Being low as dirt, taking what's important from me":
-                        await PlaySong("Being low as dirt, taking what's important from me", ComparedChild.TimedLyricsText, "M7FH1dL51oU");
+                        await PlaySong("Being low as dirt, taking what's important from me", BeingLowAsDirt.TimedLyricsText, "M7FH1dL51oU");
                         break;
                     default:
                         break;
