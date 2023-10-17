@@ -3,75 +3,57 @@
     // Need 5 tab indent to work for some reason
     // TODO: Fix
     public static string TimedLyricsText { get; } = @"
-                [00:00.600]Ano yo iki no basu ni notte saraba.
-                [00:12.000]Osanai koro ayameta inochi wa
-                [00:14.800]Kazoe kirezu
-                [00:16.400]Chiisana inochi o houmuttera
-                [00:18.400]Heizen to waratte kiro ni tsuita
-                [00:20.400]Ima ni natte kangaetara
-                [00:22.600]Massaki ni shinu no wa
-                [00:24.820]Aa watashi de yokatta
-                [00:27.800]Uraura
-                [00:28.600]To shita mawari no kuuki ga koku te
-                [00:32.000]Sonzai kachi o ubau desho
-                [00:35.500]Seimeisen toka
-                [00:36.600]Muda ni nagai dake de
-                [00:37.800]Nan no yaku ni mo tatanai
-                [00:39.400]Tada no shiwa da yo
-                [00:40.800]Kokoro no oku ga shoumonai
-                [00:42.400]Jinseikan wo
-                [00:44.260]Nageite iru no
-                [00:45.400]Mimi ni sasaru risou
-                [00:46.680]Hakisutete
-                [00:48.160]Kiete shimaitai shougai nante mon ni
-                [00:50.400]Donna ne ga tsuite
-                [00:52.100]Jikochuushinteki datte?
-                [00:53.800]Omoi no kakera mo
-                [00:54.400]Shiranai de
-                [00:56.200]Douse mukou suujuunen tatta saki de wa
-                [00:58.600]Kemutagarete
-                [01:00.000]Nara watashi o sashite koroshite ubatte satte
-                [01:02.600]Ano yo iki no basu ni notte saraba.
-                [01:14.000]Osanai koro baka ni sareta koto mo wasure kirezu
-                [01:18.200]Mi ni oboe no nai rifujinsa ga
-                [01:20.400]Kara hanarete kurenai nda
-                [01:22.400]Ima ni natte kangaetara
-                [01:24.800]Naze nomikonda no ka
-                [01:26.780]Aa hamukaeba yokatta
-                [01:29.600]Moyamoya
-                [01:30.800]To shita hitogomi no naka o hatte
-                [01:34.000]Sonzai kachi o shimesu no yo
-                [01:37.600]Koufukuron toka
-                [01:38.800]Muda ni fukai dake de
-                [01:40.000]Nan no yaku ni mo tatanai
-                [01:41.400]Tada no moji da yo
-                [01:42.800]Asai kokoro ga patto shinai shousoukan ni
-                [01:46.040]Karareru nda
-                [01:47.400]Toki dake ga tatte
-                [01:48.500]Modorenai na
-                [01:50.000]Kiete shimaitai shougai nante mon ni
-                [01:52.600]Donna me ga haete
-                [01:54.000]Mendoukusai yatsu datte?
-                [01:55.600]Omae no koe toka
-                [01:56.600]Iranai wa
-                [01:58.040]Douse mukou suujuunen tatta saki made
-                [02:00.600]Mochikosu dake
-                [02:02.000]Nara watashi o sashite koroshite ubatte satte
-                [02:24.060]Kiete shimaitai shougai nante mon ni imi wa aru ndesu ka?
-                [02:32.200]Kiete shimaitai shougai nante mon ni yume wa aru ndesu ka?
-                [02:38.720]Nai jan.
-                [02:40.700]Kiete shimaitai shougai nante mon ni
-                [02:42.400]Nante mon ni donna ne ga tsuite
-                [02:44.200]Tsurai yo ne wakaru yo datte?
-                [02:45.600]Wakatta you na koto
-                [02:46.700]Iwanai de
-                [02:48.200]Douse mukou suujuunen tatta saki demo
-                [02:50.600]Nageite ite
-                [02:52.000]Nara watashi o sashite koroshite ubatte satte
-                [02:55.000]Sore ga
-                [02:58.000]Watashi ni dekiru
-                [03:00.000]Saisho de saigo no akuagaki da
-                [03:03.000]Ano yo iki no basu ni notte saraba.
-                [03:06.400]Demo watashi wa kuite sakende ame ga futte
-                [03:09.400]Tsuyu";
+                [00:00.500]ごめんなさい ごめんなさい
+                [00:02.520]その一言すら脳裏には無くて
+                [00:04.880]消えてよ 消えてよ
+                [00:07.060]今すぐにそこから去ってしまってよ
+                [00:09.120]何時だって私だけの特権だと
+                [00:12.240]疑ったこと無いから
+                [00:14.800]泥の分際で私だけの大切を奪おうだなんて
+                [00:19.800]だって地面の上這って
+                [00:21.720]見上げることしか能がないくせに
+                [00:24.360]この翼の美しさにはかなわないのだから
+                [00:29.300]何も恐れてないのよ
+                [00:31.620]何も恐れてないのに
+                [00:33.540]痛い　痛い　痛い　痛いのよ
+                [00:37.120]気のせいだ　気のせいだ　気のせいだ
+                [00:43.800]あぁ無口になって目も合わせなくなって
+                [00:47.700]それで気づいてよって鈍感な貴方に酔って
+                [00:51.900]距離をとることだって逆に甘えてみたって
+                [00:56.160]全然伝わることなくて絶対嫌われたくはないの
+                [01:00.960]強く 酷く 期待して
+                [01:03.440]想えば想うほどに荒立って
+                [01:05.720]そうだ全部彼奴のせいだって
+                [01:09.160]泥の分際で私だけの大切を奪おうだなんて
+                [01:14.240]だって期限付きの生を有り難がるしか能がないくせに
+                [01:18.720]この翼は永遠の先まで果てること無いから
+                [01:23.740]何も恐れてないのよ
+                [01:25.900]何も恐れてないのに
+                [01:28.120]痛い　痛い　痛い　痛いのよ
+                [01:31.580]気のせいだ　気のせいだ　気のせいだ
+                [02:00.280]強く 甘く 期待して
+                [02:03.200]笑えば笑うほどに苛立って
+                [02:05.520]そうだ全部彼奴のせいだって
+                [02:11.840]ごめんなさい　ごめんなさい
+                [02:13.880]その一言すら脳裏には無くて
+                [02:16.100]消えてよ　消えてよ
+                [02:18.180]今すぐにそこから去ってしまってよ
+                [02:20.500]何時だって私だけの特権だと
+                [02:23.580]疑ったこと無いから
+                [02:26.000]泥の
+                [02:27.180]泥の分際で私だけの大切を奪おうだなんて
+                [02:31.940]だって地面の上這って
+                [02:34.100]汚らわしいのに可愛いがんないでよ
+                [02:36.760]見て 私を あなたが褒めてくれたこの翼を
+                [02:41.020]奇麗でしょ
+                [02:42.140]泥の分際が選ばれて 私が追放だなんて
+                [02:47.140]絶対に貴方のせいよ
+                [02:49.100]何かの間違いなんだこんなのはね
+                [02:51.580]「ごめんなさい」すらも
+                [02:53.440]届かないほどの速さで堕ちてく
+                [02:56.720]本当に愛してる
+                [02:58.720]私だけの貴方を
+                [03:00.820]未練 未練 未練 未練しか
+                [03:03.800]残らないこんな結末を
+                [03:06.660]反逆者として背負っていくんだね";
 }

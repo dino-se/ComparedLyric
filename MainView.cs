@@ -137,7 +137,7 @@ namespace ComparedLyric
                         await PlaySong("Under the Summer Breeze", UnderTheSummerBreeze.TimedLyricsText, "LoK17z6xDwI");
                         break;
                     case "If There Was An Endpoint.":
-                        await PlaySong("If There Was An Endpoint.", UnderTheSummerBreeze.TimedLyricsText, "vcw5THyM7Jo");
+                        await PlaySong("If There Was An Endpoint.", IfThereWasAnEndpoint.TimedLyricsText, "vcw5THyM7Jo");
                         break;
                     case "I'm getting on the bus to the other world, see ya!":
                         await PlaySong("I'm getting on the bus to the other world, see ya!", BusToTheOtherWorld.TimedLyricsText, "4QXCPuwBz2E");
