@@ -77,38 +77,39 @@ namespace ComparedLyric
 
             SongListControl[] listSongs = new SongListControl[songIndex];
 
-            string[,] songsList = new string[songIndex, 2] {
-                { "Compared Child","3:36" },
-                { "Trapped in the Past","3:50" },
-                { "Hide and Seek Alone","3:14" },
-                { "It's Raining After All","4:07" },
-                { "Under the Summer Breeze","3:23" },
-                { "Compared Child (TUYU Remix)","3:36" },
-                { "Goodbye to Rock you","3:28" },
-                { "If There Was An Endpoint.","3:00" },
-                { "I'm getting on the bus to the other world, see ya!","3:16" },
-                { "Being low as dirt, taking what's important from me","3:13" },
+            //[Title] [Time] [Image]
+            object[,] songsList = new object[songIndex, 3] {
+                { "Compared Child", "3:36", Resources.Compared_Child },
+                { "Trapped in the Past", "3:50", Resources.Trapped_In_The_Past },
+                { "Hide and Seek Alone", "3:14", Resources.Trapped_In_The_Past },
+                { "It's Raining After All", "4:07", Resources.Compared_Child },
+                { "Under the Summer Breeze", "3:23", Resources.Compared_Child },
+                { "Compared Child (TUYU Remix)", "3:36", Resources.Compared_Child_Remix },
+                { "Goodbye to Rock you", "3:28", Resources.Compared_Child },
+                { "If There Was An Endpoint.", "3:00", Resources.Compared_Child },
+                { "I'm getting on the bus to the other world, see ya!", "3:16", Resources.Compared_Child },
+                { "Being low as dirt, taking what's important from me", "3:13", Resources.Compared_Child },
             };
 
-            Image[] songIcon = new Image[songIndex] {
-                Resources.Compared_Child,
-                Resources.Trapped_In_The_Past,
-                Resources.Trapped_In_The_Past,
-                Resources.Compared_Child,
-                Resources.Compared_Child,
-                Resources.Compared_Child_Remix,
-                Resources.Compared_Child,
-                Resources.Compared_Child,
-                Resources.Compared_Child,
-                Resources.Compared_Child};
+            //Image[] songIcon = new Image[songIndex] {
+            //    Resources.Compared_Child,
+            //    Resources.Trapped_In_The_Past,
+            //    Resources.Trapped_In_The_Past,
+            //    Resources.Compared_Child,
+            //    Resources.Compared_Child,
+            //    Resources.Compared_Child_Remix,
+            //    Resources.Compared_Child,
+            //    Resources.Compared_Child,
+            //    Resources.Compared_Child,
+            //    Resources.Compared_Child};
 
             for (int i = 0; i < listSongs.Length; i++)
             {
                 listSongs[i] = new SongListControl()
                 {
-                    SongIcon = songIcon[i],
-                    SongTitle = songsList[i, 0],
-                    SongTime = songsList[i, 1]
+                    SongIcon = (Image)songsList[i, 2],
+                    SongTitle = (string)songsList[i, 0],
+                    SongTime = (string)songsList[i, 1]
                 };
 
                 flp_SongList.Controls.Add(listSongs[i]);
