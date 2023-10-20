@@ -12,12 +12,14 @@ namespace ComparedLyric
     public partial class MainView : Form
     {
         private readonly TimedLyrics timedLyrics;
+        private readonly Playlist playlist;
         private double videoStartTime = 0;
         private bool isVideoStarted = false;
         public MainView()
         {
             InitializeComponent();
             timedLyrics = new TimedLyrics();
+            playlist = new Playlist(this);
             GenerateSongList();
         }
         
@@ -73,43 +75,15 @@ namespace ComparedLyric
         {
             flp_SongList.Controls.Clear();
 
-            const int songIndex = 10;
-
-            SongListControl[] listSongs = new SongListControl[songIndex];
-
-            //[Title] [Time] [Image]
-            object[,] songsList = new object[songIndex, 3] {
-                { "Compared Child", "3:36", Resources.Compared_Child },
-                { "Trapped in the Past", "3:50", Resources.Trapped_In_The_Past },
-                { "Hide and Seek Alone", "3:14", Resources.Trapped_In_The_Past },
-                { "It's Raining After All", "4:07", Resources.Compared_Child },
-                { "Under the Summer Breeze", "3:23", Resources.Compared_Child },
-                { "Compared Child (TUYU Remix)", "3:36", Resources.Compared_Child_Remix },
-                { "Goodbye to Rock you", "3:28", Resources.Compared_Child },
-                { "If There Was An Endpoint.", "3:00", Resources.Compared_Child },
-                { "I'm getting on the bus to the other world, see ya!", "3:16", Resources.Compared_Child },
-                { "Being low as dirt, taking what's important from me", "3:13", Resources.Compared_Child },
-            };
-
-            //Image[] songIcon = new Image[songIndex] {
-            //    Resources.Compared_Child,
-            //    Resources.Trapped_In_The_Past,
-            //    Resources.Trapped_In_The_Past,
-            //    Resources.Compared_Child,
-            //    Resources.Compared_Child,
-            //    Resources.Compared_Child_Remix,
-            //    Resources.Compared_Child,
-            //    Resources.Compared_Child,
-            //    Resources.Compared_Child,
-            //    Resources.Compared_Child};
+            SongListControl[] listSongs = new SongListControl[Playlist.songIndex];
 
             for (int i = 0; i < listSongs.Length; i++)
             {
                 listSongs[i] = new SongListControl()
                 {
-                    SongIcon = (Image)songsList[i, 2],
-                    SongTitle = (string)songsList[i, 0],
-                    SongTime = (string)songsList[i, 1]
+                    SongIcon = (Image)playlist.songsList[i, 2],
+                    SongTitle = (string)playlist.songsList[i, 0],
+                    SongTime = (string)playlist.songsList[i, 1]
                 };
 
                 flp_SongList.Controls.Add(listSongs[i]);
