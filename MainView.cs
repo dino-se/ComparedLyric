@@ -88,53 +88,11 @@ namespace ComparedLyric
 
                 flp_SongList.Controls.Add(listSongs[i]);
 
-                listSongs[i].Click += new EventHandler(this.SongControl_Click);
+                listSongs[i].Click += new EventHandler(playlist.SongControl_Click);
             }
         }
 
-        async void SongControl_Click(object sender, EventArgs e)
-        {
-            if (sender is SongListControl songControl)
-            {
-                switch (songControl.SongTitle)
-                {
-                    case "Compared Child":
-                        await PlaySong("Compared Child", ComparedChild.TimedLyricsText, "olWvy0PiLfA");
-                        break;
-                    case "Trapped in the Past":
-                        await PlaySong("Trapped in the Past", TrappedInThePast.TimedLyricsText, "lGFEqEFJ410");
-                        break;
-                    case "Hide and Seek Alone":
-                        await PlaySong("Hide and Seek Alone", HideAndSeekAlone.TimedLyricsText, "Bq0ZINOzVng");
-                        break;
-                    case "It's Raining After All":
-                        await PlaySong("It's Raining After All", ItsRainingAfterAll.TimedLyricsText, "D0ehC_8sQuU");
-                        break;
-                    case "Under the Summer Breeze":
-                        await PlaySong("Under the Summer Breeze", UnderTheSummerBreeze.TimedLyricsText, "LoK17z6xDwI");
-                        break;
-                    case "Goodbye to Rock you":
-                        await PlaySong("Goodbye to Rock you", UnderTheSummerBreeze.TimedLyricsText, "1cGQotpn8r4");
-                        break;
-                    case "If There Was An Endpoint.":
-                        await PlaySong("If There Was An Endpoint.", IfThereWasAnEndpoint.TimedLyricsText, "vcw5THyM7Jo");
-                        break;
-                    case "I'm getting on the bus to the other world, see ya!":
-                        await PlaySong("I'm getting on the bus to the other world, see ya!", BusToTheOtherWorld.TimedLyricsText, "4QXCPuwBz2E");
-                        break;
-                    case "Compared Child (TUYU Remix)":
-                        await PlaySong("Compared Child (TUYU Remix)", ComparedChild.TimedLyricsText, "4TmzJzGXbB4");
-                        break;
-                    case "Being low as dirt, taking what's important from me":
-                        await PlaySong("Being low as dirt, taking what's important from me", BeingLowAsDirt.TimedLyricsText, "M7FH1dL51oU");
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
-
-        private async Task PlaySong(string songTitle, string timedLyricsText, string videoId)
+        internal async Task PlaySong(string songTitle, string timedLyricsText, string videoId)
         {
             await Task.Run(() =>
             {
