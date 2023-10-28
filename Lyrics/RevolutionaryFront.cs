@@ -1,87 +1,92 @@
 ﻿
+using static System.Windows.Forms.AxHost;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using System.Security.Policy;
+using System;
+
 class RevolutionaryFront
 {
     // Need 5 tab indent to work for some reason
     // TODO: Fix
     public static string TimedLyricsText { get; } = @"
-                [00:00.630]あの日の覚悟も
-                [00:02.530]全部溶けてしまったんだ
-                [00:04.280]ほら欲に塗れた 見苦しい悪魔
-                [00:07.820]そうさ 君だって
-                [00:09.790]とっくに嫌になってんね
-                [00:11.590]だ だ だから もう見放して
-                [00:13.990]「お前なんて何処へでも行け」と
-                [00:16.730]その一言で僕は楽になって
-                [00:19.090]夢にまで見たこんな理想も
-                [00:22.560]慣れてしまえばただの現実だ
-                [00:25.300]だ だ だけど 認められて
-                [00:28.240]色づいていた 今までの日々が
-                [00:32.830]睨みつけてんだ
-                [00:34.250]こんな死んだ心を
-                [00:36.180]まだやるべきことが沢山あると
-                [00:39.010]今にも折れそうだ 創作人生
-                [00:42.440]雨 雨 ちっとも降らないね
-                [00:45.440]ほら今日もずっと枯れたまま
-                [00:49.920]見て 見て 僕を この穢れた僕を
-                [00:55.730]何一つ残せない僕だ
-                [01:00.490]涙すら枯れてしまった
-                [01:04.550]枯れてしまった
-                [01:06.210]また振り出しだね
-                [01:09.550]愛を謳って 夢を語って
-                [01:12.780]それがどうした？ほら白々しい
-                [01:16.210]全て奪って
-                [01:17.810]富も名声も力も 全てを
-                [01:21.410]誰か無に還してはくれないか
-                [01:24.630]そして取り戻せよ初心
-                [01:26.980]下克上
-                [01:28.710]だ だ だけど もう見放して
-                [01:31.120]「お前なんて口だけの屑」と
-                [01:33.900]その一言で僕は楽になって
-                [01:36.260]昨日までの軌跡に鍵して
-                [01:39.640]起伏の無い余生を謳歌だ
-                [01:42.380]だ だ だから 求めないで
-                [01:45.420]錆びついてきた 今までの日々が
-                [01:49.960]癒してはくれない
-                [01:51.400]こんな死んだ心じゃ
-                [01:53.390]なら此処で終わりでも構わない
-                [01:56.180]今にも折れそうだ 創作人生
-                [01:59.600]雨 雨 ちっとも降らないね
-                [02:02.590]ほら今日もずっと枯れたまま
-                [02:07.100]見て 見て 僕を この穢れた僕を
-                [02:11.750]失ってしまった愛も
-                [02:13.230]全部全部どうでもよくて
-                [02:15.170]もう一生適当でも構わないから
-                [02:17.880]涙すら枯れてしまった
-                [02:21.700]枯れてしまった
-                [02:23.460]また振り出しだね
-                [02:26.340]あの日の覚悟も
-                [02:28.220]全部溶けてしまったんだ
-                [02:29.980]ほら欲に塗れた 見苦しい悪魔
-                [02:33.540]そうさ 君だって
-                [02:35.520]どうせ裏切るだろ？
-                [02:37.390]もっと もっと
-                [02:38.110]もっと暴れて さよならだ
-                [02:40.770]だ だ だから もう見放して
-                [02:43.170]「お前なんて何処へでも行け」と
-                [02:45.950]その一言で僕は楽になって
-                [02:48.240]夢にまで見たこんな理想も
-                [02:51.620]慣れてしまえばただの現実だ
-                [02:54.540]だ だ だけど 仲間が居て
-                [02:57.430]救われてきた 今までの日々が
-                [03:01.970]襲い掛かるんだ
-                [03:03.430]こんな死んだ心に
-                [03:05.370]まだ生み出せと湧き上がる鼓動
-                [03:08.200]命ある限り 創作人生
-                [03:11.620]雨 雨 ざぁざぁ降ってんね
-                [03:14.640]ほら革命日和だね
-                [03:19.090]見て 見て 僕を まだ終わらない僕ら
-                [03:23.710]失ってしまった愛を
-                [03:25.290]全部全部取り戻して
-                [03:27.170]まだ全然泣いていたいけど
-                [03:28.810]それすら歌にして
-                [03:30.570]世界中で待っている
-                [03:32.120]沢山の同志へ向けて
-                [03:33.970]“革命前線”
-                [03:34.960]手を繋いでくれませんか";
+                [00:00.630]Ano hi no kakugo mo
+                [00:02.530]Zenbu tokete shimatta nda
+                [00:04.280]Hora yoku ni mamireta mijikushii akuma
+                [00:07.820]Sō sa kimi datte
+                [00:09.790]Tokku ni iya ni natte'n ne
+                [00:11.590]Da da dakara mō mihanashte
+                [00:13.990]“Omae nante doko e demo ike” to
+                [00:16.730]Sono hitokoto de boku wa raku ni natte
+                [00:19.090]Yume ni made mita konna risō mo
+                [00:22.560]Narete shimaeba tada no genjitsu da
+                [00:25.300]Da da dakedo mitomerarete
+                [00:28.240]Irozuite ita ima made no hibi ga
+                [00:32.830]Niramitsuketen da
+                [00:34.250]Konna shinda kokoro o
+                [00:36.180]Mada yaru beki koto ga takusan aru to
+                [00:39.010]Ima ni mo oresō da sōsaku jinsei
+                [00:42.440]Ame ame chitto mo furanai ne
+                [00:45.440]Hora kyō mo zutto kareta mama
+                [00:49.920]Mite mite boku o kono kegareta boku o
+                [00:55.730]Nani hitotsu nokosenai boku da
+                [01:00.490]Namida sura karete shimatta
+                [01:04.550]Karete shimatta
+                [01:06.210]Mata furidashi da ne
+                [01:09.550]Ai o utatte yume o katatte
+                [01:12.780]Sore ga dō shita? Hora shirushī
+                [01:16.210]Subete ubatte
+                [01:17.810]Tomi mo meisei mo chikara mo subete o
+                [01:21.410]Dareka mu ni kaeshite wa kurenai ka
+                [01:24.630]Soshite torimodose yo shoshin
+                [01:26.980]Gekokujō
+                [01:28.710]Da da dakedo mō mihanashte
+                [01:31.120]“Omae nante kuchi dake no kuzu” to
+                [01:33.900]Sono hitokoto de boku wa raku ni natte
+                [01:36.260]Kinō made no kiseki ni kagi shite
+                [01:39.640]Kifuku no nai yosei o ka da
+                [01:42.380]Da da dakara motomenaide
+                [01:45.420]Sabitsuite kita ima made no hibi ga
+                [01:49.960]Iyashite wa kurenai
+                [01:51.400]Konna shinda kokoro ja
+                [01:53.390]Nara koko de owari demo kamawanai
+                [01:56.180]Ima ni mo oresō da sōsaku jinsei
+                [01:59.600]Ame ame chitto mo furanai ne
+                [02:02.590]Hora kyō mo zutto kareta mama
+                [02:07.100]Mite mite boku o kono kegareta boku o
+                [02:11.750]Ushinatte shimatta ai mo
+                [02:13.230]Zenbu zenbu dō demo yokute
+                [02:15.170]Mō isshō tekidō demo kamawanai kara
+                [02:17.880]Namida sura karete shimatta
+                [02:21.700]Karete shimatta
+                [02:23.460]Mata furidashi da ne
+                [02:26.340]Ano hi no kakugo mo
+                [02:28.220]Zenbu tokete shimatta nda
+                [02:29.980]Hora yoku ni mamireta mijikushii akuma
+                [02:33.540]Sō sa kimi datte
+                [02:35.520]Dōse uragiru daro?
+                [02:37.390]Motto motto
+                [02:38.110]Motto abarete sayonara da
+                [02:40.770]Da da dakara mō mihanashte
+                [02:43.170]“Omae nante doko e demo ike” to
+                [02:45.950]Sono hitokoto de boku wa raku ni natte
+                [02:48.240]Yume ni made mita konna risō mo
+                [02:51.620]Narete shimaeba tada no genjitsu da
+                [02:54.540]Da da dakedo nakama ga ite
+                [02:57.430]Sukuwarete kita ima made no hibi ga
+                [03:01.970]Osoi kakaru nda
+                [03:03.430]Konna shinda kokoro ni
+                [03:05.370]Mada umidase to wakiagaru kodō
+                [03:08.200]Inochi aru kagiri sōsaku jinsei
+                [03:11.620]Ame ame zā zā futte n ne
+                [03:14.640]Hora kakumei biyori da ne
+                [03:19.090]Mite mite boku o mada owaranai bokura
+                [03:23.710]Ushinatte shimatta ai o
+                [03:25.290]Zenbu zenbu torimodoshite
+                [03:27.170]Mada zenzen naite itai kedo
+                [03:28.810]Sore sura uta ni shite
+                [03:30.570]Sekaijū de matte iru
+                [03:32.120]Takusan no dōshi e mukete
+                [03:33.970]“Kakumei zensen”
+                [03:34.960]Te o tsunaide kuremasen ka";
 }
 
