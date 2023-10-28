@@ -60,7 +60,7 @@ class Playlist
                     break;
                 case "Revolutionary front":
                     await mainViewInstance.PlaySong("Revolutionary front",
-                        UnderTheSummerBreeze.TimedLyricsText, "74q3rOlcPaI");
+                        RevolutionaryFront.TimedLyricsText, "74q3rOlcPaI");
                     break;
                 case "If There Was An Endpoint.":
                     await mainViewInstance.PlaySong("If There Was An Endpoint.",
