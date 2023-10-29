@@ -81,9 +81,9 @@ namespace ComparedLyric
             {
                 listSongs[i] = new SongListControl()
                 {
-                    SongIcon = (Image)playlist.songsList[i, 2],
-                    SongTitle = (string)playlist.songsList[i, 0],
-                    SongTime = (string)playlist.songsList[i, 1]
+                    SongTitle = (string)playlist.songsList[i, 1],
+                    SongTime = (string)playlist.songsList[i, 2],
+                    SongIcon = (Image)playlist.songsList[i, 4]
                 };
 
                 flp_SongList.Controls.Add(listSongs[i]);

@@ -1,9 +1,4 @@
 ﻿
-using static System.Windows.Forms.AxHost;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
-using System.Security.Policy;
-using System;
-
 class RevolutionaryFront
 {
     // Need 5 tab indent to work for some reason
