@@ -38,7 +38,7 @@ class Playlist
 
         //No lyrics
         { "1cGQotpn8r4","Goodbye to Rock you", "3:28",
-            TrappedInThePast.TimedLyricsText, Resources.Compared_Child },
+            GoodbyeToRockYou.TimedLyricsText, Resources.Compared_Child },
 
         { "vcw5THyM7Jo","If There Was An Endpoint.", "3:00",
             IfThereWasAnEndpoint.TimedLyricsText, Resources.Compared_Child },

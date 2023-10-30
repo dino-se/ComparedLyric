@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Lyrics\BeingLowAsDirt.cs" />
     <Compile Include="Lyrics\BusToTheOtherWorld.cs" />
+    <Compile Include="Lyrics\GoodbyeToRockYou.cs" />
     <Compile Include="Lyrics\HideAndSeekAlone.cs" />
     <Compile Include="Lyrics\IfThereWasAnEndpoint.cs" />
     <Compile Include="Lyrics\It%27sRainingAfterAll.cs" />
