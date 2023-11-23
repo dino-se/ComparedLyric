@@ -12,7 +12,7 @@ class Playlist
         mainViewInstance = mainView;
     }
 
-    //[Title] [Time] [Image]
+    //[videoId] [Title] [Time] [lyrics] [Image]
     internal object[,] songsList = new object[songIndex, 5]
     {
         { "olWvy0PiLfA","Compared Child", "3:36",

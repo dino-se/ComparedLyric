@@ -1,10 +1,10 @@
 ﻿using System;
 
-public class TimedLyrics
+class Parser
 {
-    public string[] lyricsLines;
+    internal string[] lyricsLines;
 
-    public bool ParseTimestamp(string line, out TimeSpan timestamp, out string lyricsText)
+    internal bool ParseTimestamp(string line, out TimeSpan timestamp, out string lyricsText)
     {
         int startPos = line.IndexOf('[');
         int endPos = line.IndexOf(']');
@@ -25,7 +25,7 @@ public class TimedLyrics
         return false;
     }
 
-    public int FindLyricsLineIndexByTime(double elapsedTime)
+    internal int FindLyricsLineIndexByTime(double elapsedTime)
     {
         for (int i = 0; i < lyricsLines.Length; i++)
         {

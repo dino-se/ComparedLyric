@@ -1,9 +1,6 @@
-﻿using CefSharp;
-using CefSharp.WinForms;
-using ComparedLyric.Properties;
-using System;
+﻿using System;
+using CefSharp;
 using System.Drawing;
-using System.Reflection.Emit;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -11,15 +8,15 @@ namespace ComparedLyric
 {
     public partial class MainView : Form
     {
-        private readonly TimedLyrics timedLyrics;
-        private readonly Playlist playlist;
+        private readonly Parser lyricsParser;
+        private readonly Playlist songPlaylist;
         private double videoStartTime = 0;
         private bool isVideoStarted = false;
         public MainView()
         {
             InitializeComponent();
-            timedLyrics = new TimedLyrics();
-            playlist = new Playlist(this);
+            lyricsParser = new Parser();
+            songPlaylist = new Playlist(this);
             GenerateSongList();
         }
         
@@ -55,12 +52,12 @@ namespace ComparedLyric
                             return;
 
                         double elapsedTime = currentTime - videoStartTime;
-                        int currentLineIndex = timedLyrics.FindLyricsLineIndexByTime(elapsedTime);
+                        int currentLineIndex = lyricsParser.FindLyricsLineIndexByTime(elapsedTime);
 
-                        if (currentLineIndex >= 0 && currentLineIndex < timedLyrics.lyricsLines.Length)
+                        if (currentLineIndex >= 0 && currentLineIndex < lyricsParser.lyricsLines.Length)
                         {
-                            string currentLine = timedLyrics.lyricsLines[currentLineIndex].Substring(10);
-                            if (timedLyrics.ParseTimestamp(currentLine, out _, out string lyricsText))
+                            string currentLine = lyricsParser.lyricsLines[currentLineIndex].Substring(10);
+                            if (lyricsParser.ParseTimestamp(currentLine, out _, out string lyricsText))
                             {
                                 lblLyrics.Visible = true;
                                 lblLyrics.Text = lyricsText;
@@ -81,14 +78,14 @@ namespace ComparedLyric
             {
                 listSongs[i] = new SongListControl()
                 {
-                    SongTitle = (string)playlist.songsList[i, 1],
-                    SongTime = (string)playlist.songsList[i, 2],
-                    SongIcon = (Image)playlist.songsList[i, 4]
+                    SongTitle = (string)songPlaylist.songsList[i, 1],
+                    SongTime = (string)songPlaylist.songsList[i, 2],
+                    SongIcon = (Image)songPlaylist.songsList[i, 4]
                 };
 
                 flp_SongList.Controls.Add(listSongs[i]);
 
-                listSongs[i].Click += new EventHandler(playlist.SongControl_Click);
+                listSongs[i].Click += new EventHandler(songPlaylist.SongControl_Click);
             }
         }
 
@@ -96,7 +93,7 @@ namespace ComparedLyric
         {
             await Task.Run(() =>
             {
-                timedLyrics.lyricsLines = timedLyricsText.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+                lyricsParser.lyricsLines = timedLyricsText.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
                 lbl_Title.Text = songTitle;
                 string embedUrl = $"https://www.youtube.com/embed/{videoId}?autoplay=1";
                 chromiumWebBrowser1.Load(embedUrl);

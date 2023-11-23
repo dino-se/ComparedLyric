@@ -76,9 +76,8 @@
     <Compile Include="MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\LyricsParser.cs" />
+    <Compile Include="Modules\Parser.cs" />
     <Compile Include="Modules\Playlist.cs" />
-    <Compile Include="Modules\TimedLyrics.cs" />
     <Compile Include="SongListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
