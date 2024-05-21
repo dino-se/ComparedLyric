@@ -12,7 +12,7 @@ class Playlist
         mainViewInstance = mainView;
     }
 
-    //[videoId] [Title] [Time] [lyrics] [Image]
+    //[videoId] [Title] [Time] [Lyrics] [Image]
     internal object[,] songsList = new object[songIndex, 5]
     {
         { "olWvy0PiLfA","Compared Child", "3:36",
@@ -35,11 +35,10 @@ class Playlist
 
         { "4TmzJzGXbB4","Compared Child (TUYU Remix)", "3:36",
             ComparedChild.TimedLyricsText, Resources.Compared_Child_Remix },
-
         //No lyrics
         { "1cGQotpn8r4","Goodbye to Rock you", "3:28",
             GoodbyeToRockYou.TimedLyricsText, Resources.Compared_Child },
-
+        //No lyrics
         { "vcw5THyM7Jo","If There Was An Endpoint.", "3:00",
             IfThereWasAnEndpoint.TimedLyricsText, Resources.Compared_Child },
 
