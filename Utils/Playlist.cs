@@ -5,7 +5,7 @@ using System;
 class Playlist
 {
     private readonly MainView mainViewInstance;
-    internal const int songIndex = 11;
+    internal const int songIndex = 12;
 
     public Playlist(MainView mainView)
     {
@@ -25,6 +25,9 @@ class Playlist
             HideAndSeekAlone.TimedLyricsText, Resources.Trapped_In_The_Past },
 
         { "D0ehC_8sQuU","It's Raining After All", "4:07",
+            ItsRainingAfterAll.TimedLyricsText, Resources.Compared_Child },
+
+        { "HwGFMez_Tnc","It's Raining Nevertheless", "3:44",
             ItsRainingAfterAll.TimedLyricsText, Resources.Compared_Child },
 
         { "LoK17z6xDwI","Under the Summer Breeze", "3:23",
