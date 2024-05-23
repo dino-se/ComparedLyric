@@ -66,6 +66,7 @@
     <Compile Include="Lyrics\HideAndSeekAlone.cs" />
     <Compile Include="Lyrics\IfThereWasAnEndpoint.cs" />
     <Compile Include="Lyrics\It%27sRainingAfterAll.cs" />
+    <Compile Include="Lyrics\It%27sRainingNevertheless.cs" />
     <Compile Include="Lyrics\RevolutionaryFront.cs" />
     <Compile Include="Lyrics\UnderTheSummerBreeze.cs" />
     <Compile Include="Lyrics\TrappedInThePast.cs" />

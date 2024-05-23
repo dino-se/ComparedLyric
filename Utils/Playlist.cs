@@ -28,7 +28,7 @@ class Playlist
             ItsRainingAfterAll.TimedLyricsText, Resources.Compared_Child },
 
         { "HwGFMez_Tnc","It's Raining Nevertheless", "3:44",
-            ItsRainingAfterAll.TimedLyricsText, Resources.Compared_Child },
+            ItsRainingNevertheless.TimedLyricsText, Resources.Compared_Child },
 
         { "LoK17z6xDwI","Under the Summer Breeze", "3:23",
             UnderTheSummerBreeze.TimedLyricsText, Resources.Compared_Child },
